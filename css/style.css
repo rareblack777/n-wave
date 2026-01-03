@@ -1,0 +1,27 @@
+/* Custom Scrollbar (Esconde a barra mas permite scroll) */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Loader Animation */
+@keyframes loading-bar {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+.animate-loading-bar {
+    animation: loading-bar 1.5s ease-in-out forwards;
+}
+
+/* Card Hover Effect Glow */
+.product-card:hover .card-glow {
+    opacity: 1;
+}
+
+/* Smooth Image Loading */
+img {
+    transition: opacity 0.3s ease-in-out;
+}
