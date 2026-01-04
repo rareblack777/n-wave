@@ -68,12 +68,11 @@ const products = [
     {
         id: "06",
         name: "Basike Power Bank Ultra Thin 10000mAh Indução Magsafe",
-        price: '<span class="text-[10px] text-gray-500 line-through mr-1">R$ 180,00</span> R$ 110,00<span class="text-[10px] text-green-400 ml-1"></span>',
+        price: '<span class="text-[10px] text-gray-500 line-through mr-1">R$ 180,00</span> R$ 110,00<span class="text-[10px] text-green-400 ml-1">-38%</span>',
         category: "tech",
         image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-m8btvrd1ue4105@resize_w450_nl.webp",
         link: "https://s.shopee.com.br/9UuwmDdkY1?share_channel_code=1",
 
-        // PREENCHA AQUI OS DADOS REAIS DO G-SPEAKER
         sales: "+2mil Vendidos", 
         rating: "4.9", 
         reviews: "1,1mil reviews"
@@ -81,178 +80,268 @@ const products = [
     {
         id: "07",
         name: "fone de ouvido sem fio (ear clip)bluetooth fon-13025",
-        price: "R$ 65,00",
+        price: '<span class="text-[10px] text-gray-500 line-through mr-1">R$ 180,00</span> R$ 69,00<span class="text-[10px] text-green-400 ml-1">-61%</span>',
         category: "tech",
         image: "https://down-br.img.susercontent.com/file/sg-11134201-8224y-mhg53ijwdukl75@resize_w450_nl.webp",
-        link: "COLE_AQUI_SEU_LINK_DE_AFILIADO",
+        link: "https://s.shopee.com.br/8pfGwuxSNW?share_channel_code=1",
+
+        sales: "210 Vendidos", 
+        rating: "4.9", 
+        reviews: "135 reviews"
     },
     {
         id: "08",
         name: "Watch X Smartwatch Relogio Serie 10 Amoled Nfc Chat GPT Original",
-        price: "R$ 204,89",
+        price: '<span class="text-[10px] text-gray-500 line-through mr-1">R$ 292,49</span> <br> R$ 194,89 - R$ 224,89<span class="text-[10px] text-green-400 ml-1">-33%</span>',
         category: "tech",
         image: "https://down-br.img.susercontent.com/file/sg-11134201-7rd4v-lvrr7762c98ib1@resize_w450_nl.webp",
-        link: "COLE_AQUI_SEU_LINK_DE_AFILIADO",
+        link: "https://s.shopee.com.br/8APaAcPR3z?share_channel_code=1",
+
+        sales: "à venda", 
+        rating: "4.8", 
+        reviews: "5,4mil reviews"
+
+        
     },
     {
         id: "09",
-        name: "Kit Escova De Limpeza 5 em 1",
-        price: "R$ 11,00",
+        name: "Kit Escova De Limpeza 5 Em 1 Teclado Hagibis Fone De Ouvido",
+        price: '<span class="text-[10px] text-gray-500 line-through mr-1">R$ 7,99 - R$ 29,99</span> <br> R$ 7,60 - R$ 29,99<span class="text-[10px] text-green-400 ml-1">-5%</span>',
         category: "tech",
         image: "https://down-br.img.susercontent.com/file/sg-11134201-7rbk6-ln29kkao4kqf69@resize_w450_nl.webp",
-        link: "COLE_AQUI_SEU_LINK_DE_AFILIADO",
+        link: "https://s.shopee.com.br/2qO3oqMvss?share_channel_code=1",
+
+        sales: "612 Vendidos", 
+        rating: "4.8", 
+        reviews: "226 reviews"
     },
     {
         id: "10",
         name: "Ventilador de pescoço sem ruído Ventilador leve USB ultra longa duração",
-        price: "R$ 39,99",
+        price: '<span class="text-[10px] text-gray-500 line-through mr-1">R$ 38,99 - R$ 39,99</span> R$ 89,00<span class="text-[10px] text-green-400 ml-1">-56%</span>',
         category: "tech",
         image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-lyirhwovryqd56@resize_w450_nl.webp",
-        link: "COLE_AQUI_SEU_LINK_DE_AFILIADO",
+        link: "https://s.shopee.com.br/2qO3pOiKLY?share_channel_code=1",
+
+        sales: "+1mil Vendidos", 
+        rating: "4.6", 
+        reviews: "578 reviews"
     },
     {
         id: "11",
-        name: "Máquina de Cortar Cabelo Dragon (Dourada)",
-        price: "R$ 18,79",
+        name: "Máquina de Cortar Cabelo Barbeiro Dragão Profissional Recarregável",
+        price: '<span class="text-[10px] text-gray-500 line-through mr-1">R$ 80,00</span> R$ 20,99<span class="text-[10px] text-green-400 ml-1">-74%</span>',
         category: "tech",
-        image: "https://down-br.img.susercontent.com/file/br-11134207-7qukw-ljsv195bwena57@resize_w450_nl.webp",
-        link: "COLE_AQUI_SEU_LINK_DE_AFILIADO",
+        image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-mcd0uzbv2j1cce@resize_w450_nl.webp",
+        link: "https://s.shopee.com.br/9AI7NkORSl?share_channel_code=1",
+
+        sales: "+500mil Vendidos", 
+        rating: "4.7", 
+        reviews: "271,1mil reviews"
     },
     {
         id: "12",
-        name: "Câmera de Segurança Lâmpada 1080p wi-fi 360°",
-        price: "R$ 58,99",
+        name: "Câmera de Segurança Wi-Fi Externa 6MP Dual Lens - PTZ 360° Visão Noturna - Sirene À Prova D'água-G1",
+        price: '<span class="text-[10px] text-gray-500 line-through mr-1">R$ 300,00</span> R$ 117,99 <span class="text-[10px] text-green-400 ml-1">-61%</span>',
         category: "tech",
-        image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-m3qd2s11ls63fe@resize_w450_nl.webp",
-        link: "COLE_AQUI_SEU_LINK_DE_AFILIADO",
+        image: "https://down-br.img.susercontent.com/file/br-11134207-81z1k-mglwc89rqd532f@resize_w450_nl.webp",
+        link: "https://s.shopee.com.br/8V2Qadk9OP?share_channel_code=1",
+
+        sales: "à venda", 
+        rating: "4.7", 
+        reviews: "602 reviews"
     },
     {
         id: "13",
-        name: "Liquidificador Portátil Mini, Original Fresh Juice Elétrico ",
-        price: "R$ 115,64",
+        name: "Liquidificador Portátil Mini, Original Fresh Juice Elétrico",
+        price: '<span class="text-[10px] text-gray-500 line-through mr-1">R$ 217,83 - R$ 439,98</span> <br> R$ 115,64 - R$ 244,02<span class="text-[10px] text-green-400 ml-1">-61%</span>',
         category: "home",
         image: "https://down-br.img.susercontent.com/file/661b2863f64b94ac187ce885b85ab6df@resize_w450_nl.webp",
-        link: "COLE_AQUI_SEU_LINK_DE_AFILIADO",
+        link: "https://s.shopee.com.br/1BFps3yJaj?share_channel_code=1",
+
+        sales: "+5mil Vendidos", 
+        rating: "4.7", 
+        reviews: "1,7mil reviews"
     },
     {
         id: "14",
-        name: "Mini Impressora Térmica Portátil (Sem Tinta)",
-        price: "R$ 89,90",
+        name: "Organizador Multifuncional 4 em 1: Dispenser Duplo + Suporte Magnético",
+        price: '<span class="text-[10px] text-gray-500 line-through mr-1">R$ 231,02 - R$ 411,54</span> <br> R$ 106,27 - R$ 189,31 <span class="text-[10px] text-green-400 ml-1">-54%</span>',
         category: "home",
-        image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-lpmm0jzw37dn69@resize_w450_nl.webp",
-        link: "COLE_AQUI_SEU_LINK_DE_AFILIADO",
+        image: "https://down-br.img.susercontent.com/file/bbf751885ec283b073744b93c8bc80ee@resize_w450_nl.webp",
+        link: "https://s.shopee.com.br/806A7TY8yQ?share_channel_code=1",
+        
+        sales: "+1mil Vendidos",
+        rating: "4.8",
+        reviews: "(555 reviews)"
     },
     {
         id: "15",
-        name: "Mini Impressora Térmica Portátil (Sem Tinta)",
-        price: "R$ 89,90",
+        name: "Umidificador Visual Anti-Gravidade + Relógio LED",
+        price: '<span class="text-[10px] text-gray-500 line-through mr-1">R$ 200,00</span> R$ 75,04 <span class="text-[10px] text-green-400 ml-1">-62%</span>',
         category: "home",
-        image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-lpmm0jzw37dn69@resize_w450_nl.webp",
-        link: "COLE_AQUI_SEU_LINK_DE_AFILIADO",
+        image: "https://down-br.img.susercontent.com/file/sg-11134201-7rd4p-lu6sz2o5gbev37@resize_w450_nl.webp",
+        link: "https://s.shopee.com.br/8pfH8DeGyz?share_channel_code=1",
+
+        sales: "+1mil Vendidos",
+        rating: "4.7",
+        reviews: "(879 reviews)"
     },
     {
         id: "16",
-        name: "Mini Impressora Térmica Portátil (Sem Tinta)",
-        price: "R$ 89,90",
+        name: "Mini Seladora Portátil USB 2 em 1 (Sela e Corta)",
+        price: '<span class="text-[10px] text-gray-500 line-through mr-1">R$ 39,99</span> R$ 21,90 <span class="text-[10px] text-green-400 ml-1">-45%</span>',
         category: "home",
-        image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-lpmm0jzw37dn69@resize_w450_nl.webp",
-        link: "COLE_AQUI_SEU_LINK_DE_AFILIADO",
+        image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-m8hn0g4ohdrl49@resize_w450_nl.webp",
+        link: "https://s.shopee.com.br/1qVWpgYoeJ?share_channel_code=1",
+
+        sales: "+30mil Vendidos",
+        rating: "4.6",
+        reviews: "(14,9mil reviews)"
     },
     {
         id: "17",
-        name: "Mini Impressora Térmica Portátil (Sem Tinta)",
-        price: "R$ 89,90",
+        name: "Escova De Limpeza Multifuncional Elétrica Sem Fio 5 Em 1",
+        price: '<span class="text-[10px] text-gray-500 line-through mr-1">R$ 89,90</span> R$ 33,27 <span class="text-[10px] text-green-400 ml-1">-63%</span>',
         category: "home",
-        image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-lpmm0jzw37dn69@resize_w450_nl.webp",
-        link: "COLE_AQUI_SEU_LINK_DE_AFILIADO",
+        image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-m527v5unmuth56@resize_w450_nl.webp",
+        link: "https://s.shopee.com.br/AAAel22DOg?share_channel_code=1",
+
+        sales: "+70mil Vendidos",
+        rating: "4.7",
+        reviews: "(36,7mil reviews)"
     },
     {
         id: "18",
-        name: "Mini Impressora Térmica Portátil (Sem Tinta)",
-        price: "R$ 89,90",
+        name: "Kit 2 em 1 Tapete Tecnológico Super Absorvente (Secagem Instantânea)",
+        price: '<span class="text-[10px] text-gray-500 line-through mr-1">R$ 30,00 - R$ 68,88</span> <br> R$ 19,49 - R$ 39,99 <span class="text-[10px] text-green-400 ml-1">-35%</span>',
         category: "home",
-        image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-lpmm0jzw37dn69@resize_w450_nl.webp",
-        link: "COLE_AQUI_SEU_LINK_DE_AFILIADO",
+        image: "https://down-br.img.susercontent.com/file/br-11134207-81z1k-mghzj2nqic5g65@resize_w450_nl.webp",
+        link: "https://s.shopee.com.br/9Uuxxpzc7l?share_channel_code=1",
+
+        sales: "+4mil Vendidos",
+        rating: "4.8",
+        reviews: "(1,6mil reviews)"
     },
     {
         id: "19",
-        name: "Mini Impressora Térmica Portátil (Sem Tinta)",
-        price: "R$ 89,90",
+        name: "Kit Forma de Gelo \"One Press\" com Depósito e Pá",
+        price: '<span class="text-[10px] text-gray-500 line-through mr-1"></span> R$ 99,00 <span class="text-[10px] text-green-400 ml-1"></span>',
         category: "home",
-        image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-lpmm0jzw37dn69@resize_w450_nl.webp",
-        link: "COLE_AQUI_SEU_LINK_DE_AFILIADO",
+        image: "https://down-br.img.susercontent.com/file/sg-11134201-7reou-m2cp36b64aqefd@resize_w450_nl.webp",
+        link: "https://s.shopee.com.br/5Alynu22DY?share_channel_code=1",
+
+        sales: "306 Vendidos",
+        rating: "4.5",
+        reviews: "(112 reviews)"
     },
     {
         id: "20",
-        name: "Mini Impressora Térmica Portátil (Sem Tinta)",
-        price: "R$ 89,90",
+        name: "Barra LED Magnética Inteligente com Sensor de Presença",
+        price: '<span class="text-[10px] text-gray-500 line-through mr-1">R$ 32,00 - R$ 128,00</span> <br> R$ 14,90 - R$ 57,90 <span class="text-[10px] text-green-400 ml-1">-53%</span>',
         category: "home",
-        image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-lpmm0jzw37dn69@resize_w450_nl.webp",
-        link: "COLE_AQUI_SEU_LINK_DE_AFILIADO",
+        image: "https://down-br.img.susercontent.com/file/sg-11134201-7repf-m22lehps5d6fda@resize_w450_nl.webp",
+        link: "https://s.shopee.com.br/9UuxxtOjRR?share_channel_code=1",
+
+        sales: "+20mil Vendidos",
+        rating: "4.8",
+        reviews: "(12,9mil reviews)"
     },
     {
         id: "21",
         name: "Mini Impressora Térmica Portátil (Sem Tinta)",
-        price: "R$ 89,90",
+        price: '<span class="text-[10px] text-gray-500 line-through mr-1">  </span>  <span class="text-[10px] text-green-400 ml-1"></span>',
         category: "gamer",
         image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-lpmm0jzw37dn69@resize_w450_nl.webp",
         link: "COLE_AQUI_SEU_LINK_DE_AFILIADO",
+
+        sales: "+20mil Vendidos",
+        rating: "4.8",
+        reviews: "(12,9mil reviews)"
     },
     {
         id: "22",
         name: "Mini Impressora Térmica Portátil (Sem Tinta)",
-        price: "R$ 89,90",
+        price: '<span class="text-[10px] text-gray-500 line-through mr-1">  </span>  <span class="text-[10px] text-green-400 ml-1"></span>',
         category: "gamer",
         image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-lpmm0jzw37dn69@resize_w450_nl.webp",
         link: "COLE_AQUI_SEU_LINK_DE_AFILIADO",
+
+        sales: "+20mil Vendidos",
+        rating: "4.8",
+        reviews: "(12,9mil reviews)"
     },
     {
         id: "23",
         name: "Mini Impressora Térmica Portátil (Sem Tinta)",
-        price: "R$ 89,90",
+        price: '<span class="text-[10px] text-gray-500 line-through mr-1">  </span>  <span class="text-[10px] text-green-400 ml-1"></span>',
         category: "gamer",
         image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-lpmm0jzw37dn69@resize_w450_nl.webp",
         link: "COLE_AQUI_SEU_LINK_DE_AFILIADO",
+
+        sales: "+20mil Vendidos",
+        rating: "4.8",
+        reviews: "(12,9mil reviews)"
     },
     {
         id: "24",
         name: "Mini Impressora Térmica Portátil (Sem Tinta)",
-        price: "R$ 89,90",
+        price: '<span class="text-[10px] text-gray-500 line-through mr-1">  </span>  <span class="text-[10px] text-green-400 ml-1"></span>',
         category: "gamer",
         image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-lpmm0jzw37dn69@resize_w450_nl.webp",
         link: "COLE_AQUI_SEU_LINK_DE_AFILIADO",
+
+        sales: "+20mil Vendidos",
+        rating: "4.8",
+        reviews: "(12,9mil reviews)"
     },
     {
         id: "25",
         name: "Mini Impressora Térmica Portátil (Sem Tinta)",
-        price: "R$ 89,90",
+        price: '<span class="text-[10px] text-gray-500 line-through mr-1">  </span>  <span class="text-[10px] text-green-400 ml-1"></span>',
         category: "gamer",
         image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-lpmm0jzw37dn69@resize_w450_nl.webp",
         link: "COLE_AQUI_SEU_LINK_DE_AFILIADO",
+
+        sales: "+20mil Vendidos",
+        rating: "4.8",
+        reviews: "(12,9mil reviews)"
     },
     {
         id: "26",
         name: "Mini Impressora Térmica Portátil (Sem Tinta)",
-        price: "R$ 89,90",
+        price: '<span class="text-[10px] text-gray-500 line-through mr-1">  </span>  <span class="text-[10px] text-green-400 ml-1"></span>',
         category: "gamer",
         image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-lpmm0jzw37dn69@resize_w450_nl.webp",
         link: "COLE_AQUI_SEU_LINK_DE_AFILIADO",
+
+        sales: "+20mil Vendidos",
+        rating: "4.8",
+        reviews: "(12,9mil reviews)"
     },
     {
         id: "27",
         name: "Mini Impressora Térmica Portátil (Sem Tinta)",
-        price: "R$ 89,90",
+        price: '<span class="text-[10px] text-gray-500 line-through mr-1">  </span>  <span class="text-[10px] text-green-400 ml-1"></span>',
         category: "gamer",
         image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-lpmm0jzw37dn69@resize_w450_nl.webp",
         link: "COLE_AQUI_SEU_LINK_DE_AFILIADO",
+
+        sales: "+20mil Vendidos",
+        rating: "4.8",
+        reviews: "(12,9mil reviews)"
     },
     {
         id: "28",
         name: "Mini Impressora Térmica Portátil (Sem Tinta)",
-        price: "R$ 89,90",
+        price: '<span class="text-[10px] text-gray-500 line-through mr-1">  </span>  <span class="text-[10px] text-green-400 ml-1"></span>',
         category: "gamer",
         image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-lpmm0jzw37dn69@resize_w450_nl.webp",
         link: "COLE_AQUI_SEU_LINK_DE_AFILIADO",
+
+        sales: "+20mil Vendidos",
+        rating: "4.8",
+        reviews: "(12,9mil reviews)"
     }
 ];
 
