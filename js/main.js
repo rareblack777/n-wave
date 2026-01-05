@@ -309,39 +309,39 @@ const products = [
     },
     {
         id: "26",
-        name: "Mini Impressora Térmica Portátil (Sem Tinta)",
-        price: '<span class="text-[10px] text-gray-500 line-through mr-1">  </span>  <span class="text-[10px] text-green-400 ml-1"></span>',
+        name: "Console Portátil Retrô R36S 64GB (+15.000 Jogos)",
+        price: '<span class="text-[10px] text-gray-500 line-through mr-1"> R$ 480,00 </span> <br> R$ 184,99 - R$ 195,99 <span class="text-[10px] text-green-400 ml-1">-61%</span>',
         category: "gamer",
-        image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-lpmm0jzw37dn69@resize_w450_nl.webp",
-        link: "COLE_AQUI_SEU_LINK_DE_AFILIADO",
+        image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-m3azpdpp7bxxe2@resize_w450_nl.webp",
+        link: "https://s.shopee.com.br/AKU6TjDb3Z?share_channel_code=1",
 
-        sales: "+20mil Vendidos",
-        rating: "4.8",
-        reviews: "(12,9mil reviews)"
+        sales: "+10mil Vendidos",
+        rating: "4.7",
+        reviews: "(5,9mil reviews)"
     },
     {
         id: "27",
-        name: "Mini Impressora Térmica Portátil (Sem Tinta)",
-        price: '<span class="text-[10px] text-gray-500 line-through mr-1">  </span>  <span class="text-[10px] text-green-400 ml-1"></span>',
+        name: "Microfone Gamer Condensador USB RGB (Stream & Podcast)",
+        price: '<span class="text-[10px] text-gray-500 line-through mr-1"> R$ 253,67 </span> R$ 98,79 <span class="text-[10px] text-green-400 ml-1"></span>',
         category: "gamer",
-        image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-lpmm0jzw37dn69@resize_w450_nl.webp",
-        link: "COLE_AQUI_SEU_LINK_DE_AFILIADO",
+        image: "https://down-br.img.susercontent.com/file/cn-11134207-820l4-mghbkepxd53i33@resize_w450_nl.webp",
+        link: "https://s.shopee.com.br/9KbZIJOV0N?share_channel_code=1",
 
-        sales: "+20mil Vendidos",
-        rating: "4.8",
-        reviews: "(12,9mil reviews)"
+        sales: "+1mil Vendidos",
+        rating: "4.9",
+        reviews: "(562 reviews)"
     },
     {
         id: "28",
-        name: "Mini Impressora Térmica Portátil (Sem Tinta)",
-        price: '<span class="text-[10px] text-gray-500 line-through mr-1">  </span>  <span class="text-[10px] text-green-400 ml-1"></span>',
+        name: "Par de Luvas de Dedo Gamer Pro (Fibra de Prata)",
+        price: '<span class="text-[10px] text-gray-500 line-through mr-1"> R$ 29,99 </span> R$ 19,99 <span class="text-[10px] text-green-400 ml-1">-33%</span>',
         category: "gamer",
-        image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-lpmm0jzw37dn69@resize_w450_nl.webp",
-        link: "COLE_AQUI_SEU_LINK_DE_AFILIADO",
+        image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-m3mgiwba32glbc@resize_w450_nl.webp",
+        link: "https://s.shopee.com.br/6VHNuro90k?share_channel_code=1",
 
-        sales: "+20mil Vendidos",
-        rating: "4.8",
-        reviews: "(12,9mil reviews)"
+        sales: "514 Vendidos",
+        rating: "4.9",
+        reviews: "(232 reviews)"
     }
 ];
 
