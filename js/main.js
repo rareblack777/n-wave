@@ -42,7 +42,7 @@ const products = [
     },
     {
         id: "04",
-        name: "Mini Processador Triturador De Alho e Alimentos Elétrico Sem Fio USB (250ml)",
+        name: "Mini Processador de Alimentos, Elétrico Portátil USB (250ml)",
         price: '<span class="text-[10px] text-gray-500 line-through mr-1">R$ R$ 40,00 - R$ 160,00</span> <br>R$ 19,50 - R$ 69,91 <span class="text-[10px] text-green-400 ml-1">-51%</span>',
         category: "home",
         image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-m84m5543nwmpb9@resize_w450_nl.webp",
@@ -55,7 +55,7 @@ const products = [
     },
     {
         id: "05",
-        name: "Projetor HY300 Portátil Smart Android 11 4K Ultra HD Wifi Bluetooth Alto Falante Embutido",
+        name: "Smart Projetor Portátil HY300 Android 11 (Suporte 4K)",
         price: '<span class="text-[10px] text-gray-500 line-through mr-1"> R$ 239,90 </span> R$ 215,91 <span class="text-[10px] text-green-400 ml-1">-10%</span>',
         category: "tech",
         image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-lxb15ke21th236@resize_w450_nl.webp",
@@ -117,7 +117,7 @@ const products = [
     },
     {
         id: "10",
-        name: "Ventilador de pescoço sem ruído Ventilador leve USB ultra longa duração",
+        name: "Ventilador de Pescoço Portátil Silencioso (USB)",
         price: '<span class="text-[10px] text-gray-500 line-through mr-1">R$ 38,99 - R$ 39,99</span> R$ 89,00<span class="text-[10px] text-green-400 ml-1">-56%</span>',
         category: "tech",
         image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-lyirhwovryqd56@resize_w450_nl.webp",
@@ -141,7 +141,7 @@ const products = [
     },
     {
         id: "12",
-        name: "Câmera de Segurança Wi-Fi Externa 6MP Dual Lens - PTZ 360° Visão Noturna - Sirene À Prova D'água-G1",
+        name: "Câmera Externa WiFi Dual Lens 6MP 360° (PTZ), À Prova D'água-G1",
         price: '<span class="text-[10px] text-gray-500 line-through mr-1">R$ 300,00</span> R$ 117,99 <span class="text-[10px] text-green-400 ml-1">-61%</span>',
         category: "tech",
         image: "https://down-br.img.susercontent.com/file/br-11134207-81z1k-mglwc89rqd532f@resize_w450_nl.webp",
@@ -165,7 +165,7 @@ const products = [
     },
     {
         id: "14",
-        name: "Organizador Multifuncional 4 em 1: Dispenser Duplo + Suporte Magnético",
+        name: "Organizador Multifuncional 4 em 1 (Dispenser & Suporte)",
         price: '<span class="text-[10px] text-gray-500 line-through mr-1">R$ 231,02 - R$ 411,54</span> <br> R$ 106,27 - R$ 189,31 <span class="text-[10px] text-green-400 ml-1">-54%</span>',
         category: "home",
         image: "https://down-br.img.susercontent.com/file/bbf751885ec283b073744b93c8bc80ee@resize_w450_nl.webp",
@@ -249,63 +249,63 @@ const products = [
     },
     {
         id: "21",
-        name: "Mini Impressora Térmica Portátil (Sem Tinta)",
-        price: '<span class="text-[10px] text-gray-500 line-through mr-1">  </span>  <span class="text-[10px] text-green-400 ml-1"></span>',
+        name: "Teclado Gamer K500-B61 Compacto 60% RGB",
+        price: '<span class="text-[10px] text-gray-500 line-through mr-1">  </span> R$ 199,90 - R$ 299,90 <span class="text-[10px] text-green-400 ml-1"></span>',
         category: "gamer",
-        image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-lpmm0jzw37dn69@resize_w450_nl.webp",
-        link: "COLE_AQUI_SEU_LINK_DE_AFILIADO",
+        image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-lvgyx5b9avtsfa@resize_w450_nl.webp",
+        link: "https://s.shopee.com.br/9pXobk2VdR?share_channel_code=1",
 
-        sales: "+20mil Vendidos",
-        rating: "4.8",
-        reviews: "(12,9mil reviews)"
+        sales: "409 Vendidos",
+        rating: "5.0",
+        reviews: "(195 reviews)"
     },
     {
         id: "22",
-        name: "Mini Impressora Térmica Portátil (Sem Tinta)",
-        price: '<span class="text-[10px] text-gray-500 line-through mr-1">  </span>  <span class="text-[10px] text-green-400 ml-1"></span>',
+        name: "Mousepad Gamer RGB Extra Grande 80x30cm 7 cores (Speed)",
+        price: '<span class="text-[10px] text-gray-500 line-through mr-1"> R$ 75,50 </span> <br> R$ 41,53 - R$ 75,50 <span class="text-[10px] text-green-400 ml-1">-45%</span>',
         category: "gamer",
-        image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-lpmm0jzw37dn69@resize_w450_nl.webp",
-        link: "COLE_AQUI_SEU_LINK_DE_AFILIADO",
+        image: "https://down-br.img.susercontent.com/file/72b0beb61729fad2c6c2e07f464cf4e0@resize_w450_nl.webp",
+        link: "https://s.shopee.com.br/5fiFe7dYuQ?share_channel_code=1",
 
-        sales: "+20mil Vendidos",
-        rating: "4.8",
-        reviews: "(12,9mil reviews)"
+        sales: "406 Vendidos",
+        rating: "4.9",
+        reviews: "(229 reviews)"
     },
     {
         id: "23",
-        name: "Mini Impressora Térmica Portátil (Sem Tinta)",
-        price: '<span class="text-[10px] text-gray-500 line-through mr-1">  </span>  <span class="text-[10px] text-green-400 ml-1"></span>',
+        name: "Kit Neon Smart Tuya RGB 12V",
+        price: '<span class="text-[10px] text-gray-500 line-through mr-1"> R$ 104,70 - R$ 209,80 </span> <br> R$ 73,29 - R$ 146,86 <span class="text-[10px] text-green-400 ml-1">-30%</span>',
         category: "gamer",
-        image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-lpmm0jzw37dn69@resize_w450_nl.webp",
-        link: "COLE_AQUI_SEU_LINK_DE_AFILIADO",
+        image: "https://down-br.img.susercontent.com/file/cn-11134207-7r98o-lyosy8s7dl7m45@resize_w450_nl.webp",
+        link: "https://s.shopee.com.br/4q98edjvGy?share_channel_code=1",
 
-        sales: "+20mil Vendidos",
-        rating: "4.8",
-        reviews: "(12,9mil reviews)"
+        sales: "42 Vendidos",
+        rating: "4.9",
+        reviews: "(8 reviews)"
     },
     {
         id: "24",
-        name: "Mini Impressora Térmica Portátil (Sem Tinta)",
-        price: '<span class="text-[10px] text-gray-500 line-through mr-1">  </span>  <span class="text-[10px] text-green-400 ml-1"></span>',
+        name: "Suporte Rgb Para Fone De Ouvido Aikino Msy-9990",
+        price: '<span class="text-[10px] text-gray-500 line-through mr-1">  </span> R$ 51,00 <span class="text-[10px] text-green-400 ml-1"></span>',
         category: "gamer",
-        image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-lpmm0jzw37dn69@resize_w450_nl.webp",
-        link: "COLE_AQUI_SEU_LINK_DE_AFILIADO",
+        image: "https://down-br.img.susercontent.com/file/sg-11134201-8258u-mfvjlgyejw96f3@resize_w450_nl.webp",
+        link: "https://s.shopee.com.br/1BFqIfaA0l?share_channel_code=1",
 
-        sales: "+20mil Vendidos",
-        rating: "4.8",
-        reviews: "(12,9mil reviews)"
+        sales: "15 Vendidos",
+        rating: "4.6",
+        reviews: "(9 reviews)"
     },
     {
         id: "25",
-        name: "Mini Impressora Térmica Portátil (Sem Tinta)",
-        price: '<span class="text-[10px] text-gray-500 line-through mr-1">  </span>  <span class="text-[10px] text-green-400 ml-1"></span>',
+        name: "Speaker Retro Smart Divoom Ditoo-Pro Pixel Art (Teclado Mecânico)",
+        price: '<span class="text-[10px] text-gray-500 line-through mr-1"> R$ 750,00 </span> R$ 639,90 <span class="text-[10px] text-green-400 ml-1">-15%</span>',
         category: "gamer",
-        image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-lpmm0jzw37dn69@resize_w450_nl.webp",
-        link: "COLE_AQUI_SEU_LINK_DE_AFILIADO",
+        image: "https://down-br.img.susercontent.com/file/sg-11134201-7rcdy-m6hv5zruwvihb3@resize_w450_nl.webp",
+        link: "https://s.shopee.com.br/30hUUsYZgC?share_channel_code=1",
 
-        sales: "+20mil Vendidos",
-        rating: "4.8",
-        reviews: "(12,9mil reviews)"
+        sales: "à venda",
+        rating: "5.0",
+        reviews: "(8 reviews)"
     },
     {
         id: "26",
