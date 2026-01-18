@@ -1,7 +1,6 @@
 // ==========================================
-// 🛠️ 1. UTILITÁRIOS (SEGURANÇA E PERFORMANCE)
+// 🛠️ 1. UTILITÁRIOS
 // ==========================================
-
 function escapeHTML(str) {
     const p = document.createElement('p');
     p.textContent = str;
@@ -21,9 +20,9 @@ function debounce(func, wait) {
 }
 
 // ==========================================
-// 📦 2. DATABASE (CATÁLOGO VALIDADO)
+// 📦 2. DATABASE (CATÁLOGO)
 // ==========================================
-
+// Mantenha a sua lista aqui como você enviou
 const products = [
     {
         id: "01",
@@ -336,30 +335,13 @@ const products = [
 ];
 
 // ==========================================
-// 🚀 3. LÓGICA DO SISTEMA (CORE)
+// 🚀 3. LÓGICA DO SISTEMA
 // ==========================================
-
 const grid = document.getElementById('product-grid');
 const noResults = document.getElementById('no-results');
 const searchInput = document.getElementById('searchInput');
 const filterBtns = document.querySelectorAll('.filter-btn');
-
-document.addEventListener("DOMContentLoaded", () => {
-    renderProducts(products);
-    initFakeSystem();
-
-    const loader = document.getElementById('loader');
-    setTimeout(() => {
-        if (loader) {
-            loader.style.opacity = '0';
-            setTimeout(() => loader.style.display = 'none', 500);
-        }
-    }, 1500);
-});
-
-// ==========================================
-// 📦 4. RENDERIZADOR E BUSCA
-// ==========================================
+const loader = document.getElementById('loader');
 
 function renderProducts(items) {
     if (!grid) return;
@@ -378,101 +360,82 @@ function renderProducts(items) {
         card.target = "_blank";
         card.className = "product-card group relative bg-nwave-card border border-white/5 rounded-2xl overflow-hidden hover:border-nwave-cyan/50 transition-all duration-300 hover:-translate-y-1 block";
         
-        const salesText = product.sales || "+100 Vendidos";
-        const ratingText = product.rating || "5.0";
-        const reviewsText = product.reviews || "10 reviews";
-
         card.innerHTML = `
             <div class="relative w-full aspect-square bg-gray-900 overflow-hidden">
                 <span class="absolute top-2 left-2 z-10 bg-black/60 backdrop-blur-md text-white border border-white/10 text-[10px] font-bold px-2 py-0.5 rounded-md">#${product.id}</span>
-                <span class="absolute bottom-2 right-2 z-10 bg-nwave-cyan/90 text-black text-[9px] font-bold px-2 py-0.5 rounded-full shadow-[0_0_10px_rgba(0,243,255,0.4)]">🔥 ${salesText}</span>
+                <span class="absolute bottom-2 right-2 z-10 bg-nwave-cyan/90 text-black text-[9px] font-bold px-2 py-0.5 rounded-full shadow-[0_0_10px_rgba(0,243,255,0.4)]">🔥 ${product.sales || "+100 Vendidos"}</span>
                 <img src="${product.image}" alt="${safeName}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" onerror="this.src='https://placehold.co/400x400/111/FFF?text=N+WAVE'">
-                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors"></div>
             </div>
             <div class="p-3 flex flex-col gap-3">
                 <div>
-                    <h3 class="text-xs text-gray-200 font-medium leading-snug line-clamp-2 h-8 group-hover:text-nwave-cyan transition-colors" title="${safeName}">${safeName}</h3>
+                    <h3 class="text-xs text-gray-200 font-medium leading-snug line-clamp-2 h-8 group-hover:text-nwave-cyan transition-colors">${safeName}</h3>
                     <div class="mt-1 flex items-center gap-1">
-                        <div class="flex text-yellow-400 text-[10px] tracking-tighter">★★★★★</div>
-                        <span class="text-[9px] text-gray-500">(${ratingText} • ${reviewsText})</span>
+                        <div class="flex text-yellow-400 text-[10px]">★★★★★</div>
+                        <span class="text-[9px] text-gray-500">(${product.rating || "4.8"} • ${product.reviews || "10 reviews"})</span>
                     </div>
                 </div>
                 <div>
                     <div class="text-sm font-bold text-white mb-2">${product.price}</div>
-                    <button class="w-full bg-white/5 hover:bg-nwave-cyan hover:text-black border border-white/10 hover:border-nwave-cyan text-gray-300 text-[10px] font-bold uppercase py-2.5 rounded-lg text-center transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-[0_0_15px_rgba(0,243,255,0.2)]">
-                        Ver Oferta <span>➔</span>
+                    <button class="w-full bg-white/5 hover:bg-nwave-cyan hover:text-black border border-white/10 text-gray-300 text-[10px] font-bold uppercase py-2.5 rounded-lg transition-all">
+                        Ver Oferta ➔
                     </button>
                 </div>
             </div>
-            <div class="card-glow absolute inset-0 bg-nwave-cyan/5 opacity-0 pointer-events-none transition-opacity duration-300"></div>
         `;
         grid.appendChild(card);
     });
 }
 
-// BUSCA E FILTROS UNIFICADOS
-if (searchInput) {
-    searchInput.addEventListener('keyup', debounce((e) => {
-        const query = e.target.value.toLowerCase();
-        const filtered = products.filter(p => 
-            p.name.toLowerCase().includes(query) || 
-            p.id.includes(query)
-        );
-        renderProducts(filtered);
-        filterBtns.forEach(btn => updateBtnStyle(btn, false));
-    }, 300));
-}
+// INICIALIZAÇÃO SEGURA
+document.addEventListener("DOMContentLoaded", () => {
+    try {
+        renderProducts(products);
+        initFakeSystem();
 
-filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-        const cat = btn.dataset.cat;
-        filterBtns.forEach(b => updateBtnStyle(b, false));
-        updateBtnStyle(btn, true);
-
-        if (cat === 'all') {
-            renderProducts(products);
-        } else {
-            const filtered = products.filter(p => p.category === cat);
-            renderProducts(filtered);
+        // Configuração de Busca
+        if (searchInput) {
+            searchInput.addEventListener('keyup', debounce((e) => {
+                const query = e.target.value.toLowerCase();
+                const filtered = products.filter(p => 
+                    p.name.toLowerCase().includes(query) || 
+                    p.id.includes(query)
+                );
+                renderProducts(filtered);
+            }, 300));
         }
-    });
-});
 
-function updateBtnStyle(btn, isActive) {
-    if (isActive) {
-        btn.classList.add('active', 'border-nwave-cyan', 'bg-nwave-cyan/10', 'text-nwave-cyan');
-        btn.classList.remove('border-white/10', 'text-gray-400');
-    } else {
-        btn.classList.remove('active', 'border-nwave-cyan', 'bg-nwave-cyan/10', 'text-nwave-cyan');
-        btn.classList.add('border-white/10', 'text-gray-400');
+        // Configuração de Filtros
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const cat = btn.dataset.cat;
+                filterBtns.forEach(b => b.classList.remove('border-nwave-cyan', 'text-nwave-cyan'));
+                btn.classList.add('border-nwave-cyan', 'text-nwave-cyan');
+                const filtered = cat === 'all' ? products : products.filter(p => p.category === cat);
+                renderProducts(filtered);
+            });
+        });
+
+    } catch (e) {
+        console.error("Erro no Sistema:", e);
+    } finally {
+        // GARANTE QUE O LOADER SUMA MESMO COM ERRO
+        setTimeout(() => {
+            if (loader) {
+                loader.style.opacity = '0';
+                setTimeout(() => loader.style.display = 'none', 500);
+            }
+        }, 1000);
     }
-}
-
-// ==========================================
-// 🔔 5. SISTEMA DE MONITORAMENTO (REALISTA)
-// ==========================================
+});
 
 function initFakeSystem() {
     const counter = document.getElementById('live-counter');
-    
     if (counter) {
-        // 1. Definimos uma base real (você pode ajustar conforme seu Analytics)
-        let visitantesBase = 142; 
-
+        let visitors = 142; 
         setInterval(() => {
-            // 2. Criamos uma oscilação natural (sobe ou desce 1 ou 2 pessoas)
-            const oscilacao = Math.floor(Math.random() * 5) - 2; 
-            visitantesBase += oscilacao;
-
-            // 3. Segurança para o número nunca ser baixo demais
-            if (visitantesBase < 130) visitantesBase = 140;
-            
-            // 4. Atualiza o texto no seu site
-            counter.innerText = visitantesBase;
-        }, 8000); // Atualiza a cada 8 segundos para parecer natural
+            visitors += Math.floor(Math.random() * 5) - 2;
+            if (visitors < 130) visitors = 140;
+            counter.innerText = visitors;
+        }, 8000);
     }
-
-    // O restante do código (Names e Cities) você pode apagar 
-    // se quiser remover os balões de "Comprador de SP comprou agora"
-    // para manter o site 100% honesto.
 }
