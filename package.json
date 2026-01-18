@@ -2,6 +2,7 @@
   "name": "nwave",
   "version": "1.0.0",
   "scripts": {
-    "portal": "vercel dev"
+    "portal": "vercel dev",
+    "salvar": "git add . && git commit -m \"update: melhorias no marketplace\" && git push"
   }
 }
