@@ -123,5 +123,34 @@
     </footer>
 
     <script src="js/main.js"></script>
+
+    <script>
+  function atualizarContador() {
+    // 1. Pega a hora atual (0 a 23)
+    const hora = new Date().getHours();
+    
+    // 2. Define a base de pessoas (Madrugada tem menos gente)
+    // Se for entre 8h e 22h, base é 850. Se for madrugada, cai para 120.
+    let base = (hora >= 8 && hora <= 22) ? 850 : 120; 
+    
+    // 3. Adiciona uma variação aleatória (+ ou - 50 pessoas)
+    // Isso faz o número parecer orgânico, nunca estático.
+    const variacao = Math.floor(Math.random() * 50); 
+    const total = base + variacao;
+
+    // 4. Encontra o seu elemento "live-counter" e troca o número
+    const elemento = document.getElementById('live-counter');
+    if (elemento) {
+        elemento.innerText = total;
+    }
+  }
+  
+  // Roda uma vez assim que abre
+  atualizarContador();
+
+  // Roda de novo a cada 5 segundos (5000 milissegundos)
+  setInterval(atualizarContador, 5000);
+</script>
+
 </body>
 </html>

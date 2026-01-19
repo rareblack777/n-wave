@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "portal": "vercel dev",
-    "salvar": "git add . && git commit -m \"update: melhorias no marketplace\" && git push",
+    "salvar": "git add . && git commit -m \"update: contador e seguranca\" && git push",
     "limpar": "if exist .vercel rmdir /s /q .vercel"
   }
 }
