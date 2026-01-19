@@ -125,29 +125,33 @@
     <script src="js/main.js"></script>
 
     <script>
-  async function checarPresencaReal() {
+  // Script ÚNICO e REAL do N WAVE
+  async function monitorarAcessosReais() {
     try {
       const res = await fetch('/api/live');
       const dados = await res.json();
       
       const contador = document.getElementById('live-counter');
+      
       if (contador) {
-        // Atualiza o número
+        // Se o número mudou, faz o efeito visual
+        if (contador.innerText != dados.online) {
+             contador.style.color = "#22c55e"; // Pisca Verde
+             setTimeout(() => contador.style.color = "white", 500);
+        }
+        // Atualiza para o número REAL do banco
         contador.innerText = dados.online;
-        
-        // Feedback visual (pisca verde sutilmente para mostrar que está vivo)
-        contador.style.transition = "color 0.5s";
-        contador.style.color = "#22c55e"; // Verde Matrix
-        setTimeout(() => contador.style.color = "white", 500);
       }
     } catch (e) {
-      console.error("Conexão off:", e);
+      console.error("Aguardando conexão...");
     }
   }
 
-  // Atualiza a cada 3 segundos
-  setInterval(checarPresencaReal, 3000);
-  checarPresencaReal();
+  // Inicia imediatamente
+  monitorarAcessosReais();
+  
+  // Verifica o banco a cada 5 segundos
+  setInterval(monitorarAcessosReais, 5000);
 </script>
 
 </body>
