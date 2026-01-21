@@ -13,37 +13,21 @@
             theme: {
                 extend: {
                     colors: {
-                        brand: {
-                            DEFAULT: '#0f172a', /* Azul Sóbrio (Confiança) */
-                            hover: '#1e293b',
-                        },
-                        accent: {
-                            DEFAULT: '#fbbf24', /* Amarelo Shopee/Amazon (Ação) */
-                            hover: '#d97706',
-                        },
+                        brand: { DEFAULT: '#0f172a', hover: '#1e293b' },
+                        accent: { DEFAULT: '#fbbf24', hover: '#d97706' },
                         danger: '#ef4444'
                     },
-                    fontFamily: {
-                        sans: ['Roboto', 'sans-serif'],
-                    }
+                    fontFamily: { sans: ['Roboto', 'sans-serif'] }
                 }
             }
         }
     </script>
     <style>
-        /* Ajuste para o HTML do preço vindo do JSON não quebrar */
-        .price-container span {
-            display: inline-block !important;
-        }
-        /* Efeito de carregamento */
-        .skeleton {
-            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-            background-color: #e5e7eb;
-        }
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: .5; }
-        }
+        .price-container span { display: inline-block !important; }
+        .skeleton { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; background-color: #e5e7eb; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .5; } }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans antialiased">
@@ -52,7 +36,7 @@
         <div class="max-w-[1280px] mx-auto px-4 flex justify-between items-center">
             <div class="flex gap-4">
                 <span><i class="fa-solid fa-check-circle mr-1 text-green-500"></i> Curadoria Verificada</span>
-                <span><i class="fa-solid fa-shield-alt mr-1 text-blue-500"></i> Compra Segura via Shopee</span>
+                <span><i class="fa-solid fa-shield-alt mr-1 text-blue-500"></i> Compra Segura</span>
             </div>
             <div class="flex gap-4 font-medium">
                 <a href="#footer" class="hover:text-white transition">Atendimento</a>
@@ -63,7 +47,6 @@
 
     <header class="bg-brand text-white sticky top-0 z-50 shadow-lg">
         <div class="max-w-[1280px] mx-auto px-4 h-20 flex items-center justify-between gap-8">
-            
             <a href="#" onclick="carregarProdutos('todos')" class="flex items-center gap-3 group cursor-pointer min-w-fit">
                 <div class="w-10 h-10 bg-accent rounded flex items-center justify-center text-brand font-black text-xl shadow-lg group-hover:bg-white transition">N</div>
                 <div class="flex flex-col">
@@ -73,7 +56,7 @@
             </a>
 
             <div class="hidden md:flex flex-1 max-w-2xl relative">
-                <input type="text" id="search-input" onkeyup="buscarProdutos()" placeholder="Busque por produtos (Ex: Impressora, Projetor)..." class="w-full h-10 rounded-l-md px-4 text-gray-800 focus:outline-none focus:ring-2 focus:ring-accent border-none placeholder-gray-500 text-sm">
+                <input type="text" id="search-input" onkeyup="buscarProdutos()" placeholder="Busque por produtos (Ex: Impressora, Alexa)..." class="w-full h-10 rounded-l-md px-4 text-gray-800 focus:outline-none focus:ring-2 focus:ring-accent border-none placeholder-gray-500 text-sm">
                 <button onclick="buscarProdutos()" class="bg-accent hover:bg-yellow-400 text-brand font-bold h-10 px-6 rounded-r-md transition flex items-center justify-center">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
@@ -88,9 +71,7 @@
 
         <div class="bg-brand-hover border-t border-gray-700">
             <div class="max-w-[1280px] mx-auto px-4 h-10 flex items-center gap-6 text-sm font-medium text-gray-300 overflow-x-auto no-scrollbar">
-                <button onclick="carregarProdutos('todos')" class="flex items-center gap-2 text-white font-bold cursor-pointer hover:bg-gray-700 px-3 py-1 rounded transition whitespace-nowrap">
-                    <i class="fa-solid fa-bars"></i> Todos
-                </button>
+                <button onclick="carregarProdutos('todos')" class="flex items-center gap-2 text-white font-bold cursor-pointer hover:bg-gray-700 px-3 py-1 rounded transition whitespace-nowrap"><i class="fa-solid fa-bars"></i> Todos</button>
                 <button onclick="carregarProdutos('tech')" class="hover:text-white hover:underline transition whitespace-nowrap">Eletrônicos</button>
                 <button onclick="carregarProdutos('home')" class="hover:text-white hover:underline transition whitespace-nowrap">Casa Inteligente</button>
                 <button onclick="carregarProdutos('gamer')" class="hover:text-white hover:underline transition whitespace-nowrap">Gamer</button>
@@ -101,9 +82,7 @@
     <div class="md:hidden bg-brand p-4 pt-0 pb-4 shadow-md sticky top-20 z-40">
         <div class="flex w-full relative">
             <input type="text" id="search-input-mobile" onkeyup="buscarProdutosMobile()" placeholder="O que você procura?" class="w-full h-11 rounded-md px-4 text-gray-800 focus:outline-none focus:ring-2 focus:ring-accent text-sm">
-            <button class="absolute right-0 top-0 h-11 px-4 text-gray-500">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
+            <button class="absolute right-0 top-0 h-11 px-4 text-gray-500"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
     </div>
 
@@ -111,20 +90,13 @@
         <div class="max-w-[1280px] mx-auto">
             <div class="h-[220px] md:h-[350px] w-full bg-gradient-to-r from-blue-900 to-slate-900 relative overflow-hidden flex items-center rounded-b-lg md:rounded-lg md:mt-4 md:mb-4">
                 <div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
-                
                 <div class="px-6 md:px-16 w-full relative z-10 flex flex-col justify-center h-full">
                     <span class="bg-accent text-brand-hover font-bold px-3 py-1 rounded-sm text-xs mb-3 shadow-lg tracking-wide uppercase inline-flex items-center gap-2 w-fit">
                         <i class="fa-solid fa-star"></i> Top Vendas 2026
                     </span>
-                    <h2 class="text-2xl md:text-5xl font-black text-white mb-3 leading-tight drop-shadow-md">
-                        Os produtos que a internet<br>está amando.
-                    </h2>
-                    <p class="text-blue-100 mb-6 font-normal text-sm md:text-lg max-w-lg">
-                        Seleção exclusiva dos gadgets mais virais com desconto.
-                    </p>
-                    <button onclick="document.getElementById('product-grid').scrollIntoView({behavior: 'smooth'})" class="w-fit bg-white text-brand font-bold px-6 py-3 rounded shadow-xl hover:bg-gray-100 transition text-xs md:text-sm uppercase tracking-wider">
-                        Ver Ofertas
-                    </button>
+                    <h2 class="text-2xl md:text-5xl font-black text-white mb-3 leading-tight drop-shadow-md">Os produtos que a internet<br>está amando.</h2>
+                    <p class="text-blue-100 mb-6 font-normal text-sm md:text-lg max-w-lg">Seleção exclusiva dos gadgets mais virais com desconto.</p>
+                    <button onclick="document.getElementById('shop-section').scrollIntoView({behavior: 'smooth'})" class="w-fit bg-white text-brand font-bold px-6 py-3 rounded shadow-xl hover:bg-gray-100 transition text-xs md:text-sm uppercase tracking-wider">Ver Ofertas</button>
                 </div>
             </div>
         </div>
@@ -132,42 +104,26 @@
 
     <div class="max-w-[1280px] mx-auto px-4 mb-10">
         <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-4 md:p-6 grid grid-cols-2 md:grid-cols-4 gap-4 items-center">
-            <div class="flex items-center gap-3">
-                <i class="fa-brands fa-pix text-2xl text-teal-600"></i>
-                <div><h4 class="font-bold text-xs md:text-sm text-gray-900">Pagamento Pix</h4><p class="text-[10px] text-gray-500">Aprovação imediata</p></div>
-            </div>
-            <div class="flex items-center gap-3">
-                <i class="fa-regular fa-credit-card text-2xl text-blue-600"></i>
-                <div><h4 class="font-bold text-xs md:text-sm text-gray-900">Cartão de Crédito</h4><p class="text-[10px] text-gray-500">Parcele suas compras</p></div>
-            </div>
-            <div class="flex items-center gap-3">
-                <i class="fa-solid fa-truck-fast text-2xl text-orange-600"></i>
-                <div><h4 class="font-bold text-xs md:text-sm text-gray-900">Envio Garantido</h4><p class="text-[10px] text-gray-500">Rastreio Shopee</p></div>
-            </div>
-            <div class="flex items-center gap-3">
-                <i class="fa-solid fa-shield-halved text-2xl text-gray-600"></i>
-                <div><h4 class="font-bold text-xs md:text-sm text-gray-900">Compra Segura</h4><p class="text-[10px] text-gray-500">Garantia de entrega</p></div>
-            </div>
+            <div class="flex items-center gap-3"><i class="fa-brands fa-pix text-2xl text-teal-600"></i><div><h4 class="font-bold text-xs md:text-sm text-gray-900">Pagamento Pix</h4><p class="text-[10px] text-gray-500">Aprovação imediata</p></div></div>
+            <div class="flex items-center gap-3"><i class="fa-regular fa-credit-card text-2xl text-blue-600"></i><div><h4 class="font-bold text-xs md:text-sm text-gray-900">Cartão de Crédito</h4><p class="text-[10px] text-gray-500">Parcele suas compras</p></div></div>
+            <div class="flex items-center gap-3"><i class="fa-solid fa-truck-fast text-2xl text-orange-600"></i><div><h4 class="font-bold text-xs md:text-sm text-gray-900">Envio Garantido</h4><p class="text-[10px] text-gray-500">Rastreio Oficial</p></div></div>
+            <div class="flex items-center gap-3"><i class="fa-solid fa-shield-halved text-2xl text-gray-600"></i><div><h4 class="font-bold text-xs md:text-sm text-gray-900">Compra Segura</h4><p class="text-[10px] text-gray-500">Garantia de entrega</p></div></div>
         </div>
     </div>
 
     <div id="shop-section" class="max-w-[1280px] mx-auto px-4 pb-20">
         <div class="flex items-center justify-between mb-6 border-b border-gray-200 pb-4">
-            <h2 class="text-xl md:text-3xl font-bold text-gray-900 flex items-center gap-2">
-                <i class="fa-solid fa-bolt text-accent"></i> Destaques
-            </h2>
-            <div id="live-indicator" class="flex items-center gap-2 bg-green-50 text-green-700 px-3 py-1 rounded-full border border-green-200 text-xs font-bold">
-                <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                <span id="live-counter">...</span> pessoas vendo
+            <h2 class="text-xl md:text-3xl font-bold text-gray-900 flex items-center gap-2"><i class="fa-solid fa-bolt text-accent"></i> Destaques</h2>
+            
+            <div class="flex items-center gap-2 bg-gray-100 text-gray-600 px-3 py-1 rounded-full border border-gray-200 text-xs font-medium">
+                <i class="fa-regular fa-eye"></i>
+                <span id="total-visits">...</span> pessoas passaram por aqui
             </div>
         </div>
 
         <div id="product-grid" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-6">
-            <div class="col-span-full py-20 grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="h-64 bg-gray-200 rounded-lg skeleton"></div>
-                <div class="h-64 bg-gray-200 rounded-lg skeleton"></div>
-                <div class="h-64 bg-gray-200 rounded-lg skeleton"></div>
-                <div class="h-64 bg-gray-200 rounded-lg skeleton"></div>
+            <div class="col-span-full py-20 text-center text-gray-400">
+                <i class="fa-solid fa-circle-notch fa-spin text-2xl"></i> Carregando catálogo...
             </div>
         </div>
     </div>
@@ -192,137 +148,119 @@
                 </div>
                 <div>
                     <h4 class="font-bold mb-4 text-gray-200">Transparência</h4>
-                    <p class="text-xs text-gray-400 leading-relaxed">
-                        Ao clicar nos links de compra, você será redirecionado para a plataforma oficial da Shopee, onde a transação é processada com total segurança. Não realizamos vendas diretas.
-                    </p>
+                    <p class="text-xs text-gray-400 leading-relaxed">Ao clicar nos links de compra, você será redirecionado para a plataforma oficial (Shopee, Amazon ou ML), onde a transação é processada com total segurança.</p>
                 </div>
             </div>
-            <div class="border-t border-gray-800 pt-8 text-center text-xs text-gray-500">
-                &copy; 2026 N WAVE Store. Todos os direitos reservados.
-            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-xs text-gray-500">&copy; 2026 N WAVE Store. Todos os direitos reservados.</div>
         </div>
     </footer>
 
     <script>
         let todosProdutos = [];
 
-        // 1. CARREGAR DADOS DO JSON
         async function buscarDados() {
             try {
                 const resposta = await fetch('products.json');
-                const dados = await resposta.json();
-                todosProdutos = dados;
+                todosProdutos = await resposta.json();
                 renderizar(todosProdutos);
             } catch (erro) {
-                console.error("Erro ao carregar produtos:", erro);
-                document.getElementById('product-grid').innerHTML = 
-                    '<p class="text-red-500 col-span-full text-center">Erro ao carregar catálogo. Verifique se o products.json está na pasta correta.</p>';
+                console.error("Erro:", erro);
+                document.getElementById('product-grid').innerHTML = '<p class="text-red-500 col-span-full text-center">Erro ao carregar produtos.</p>';
             }
         }
 
-        // 2. GERADOR DE ESTRELAS
         function gerarEstrelas(nota) {
-            const notaNum = parseFloat(nota) || 4.5; // Fallback se não tiver nota
+            const n = parseFloat(nota) || 4.5;
             let html = '';
             for (let i = 1; i <= 5; i++) {
-                if (i <= notaNum) {
-                    html += '<i class="fa-solid fa-star text-yellow-400 text-[10px]"></i>';
-                } else if (i === Math.ceil(notaNum) && !Number.isInteger(notaNum)) {
-                    html += '<i class="fa-solid fa-star-half-stroke text-yellow-400 text-[10px]"></i>';
-                } else {
-                    html += '<i class="fa-regular fa-star text-gray-300 text-[10px]"></i>';
-                }
+                if (i <= n) html += '<i class="fa-solid fa-star text-yellow-400 text-[10px]"></i>';
+                else html += '<i class="fa-regular fa-star text-gray-300 text-[10px]"></i>';
             }
             return html;
         }
 
-        // 3. RENDERIZADOR PRINCIPAL
         function renderizar(lista) {
             const grid = document.getElementById('product-grid');
             grid.innerHTML = '';
-
             if (lista.length === 0) {
-                grid.innerHTML = '<div class="col-span-full text-center py-20 text-gray-500"><i class="fa-solid fa-ghost text-4xl mb-4"></i><br>Nenhum produto encontrado.</div>';
+                grid.innerHTML = '<div class="col-span-full text-center py-20 text-gray-500">Nenhum produto encontrado.</div>';
                 return;
             }
 
             lista.forEach(p => {
-                // Lógica de Etiquetas (Mais Vendido / Desconto)
                 let badge = '';
-                const textoVendas = p.sales || "";
-                
-                if (textoVendas.includes('mil') || textoVendas.includes('+500')) {
+                const sales = p.sales || "";
+                if (sales.toLowerCase().includes('vendidos') || sales.toLowerCase().includes('top')) {
                     badge = '<div class="absolute top-0 left-0 bg-accent text-brand font-bold text-[10px] px-2 py-1 z-10 shadow-sm uppercase tracking-wider">Mais Vendido</div>';
-                } else if (p.price.includes('-')) { // Se tiver % no HTML do preço
-                    badge = '<div class="absolute top-0 left-0 bg-danger text-white font-bold text-[10px] px-2 py-1 z-10 shadow-sm uppercase">Oferta</div>';
+                }
+
+                // LÓGICA DO BOTÃO MULTI-LOJA
+                const loja = (p.store || 'shopee').toLowerCase();
+                let btnClass = "bg-orange-500 hover:bg-orange-600 text-white";
+                let btnText = "Ver na Shopee";
+                let btnIcon = '<i class="fa-solid fa-cart-shopping"></i>';
+
+                if(loja === 'amazon') {
+                    btnClass = "bg-slate-900 hover:bg-black text-white";
+                    btnText = "Ver na Amazon";
+                    btnIcon = '<i class="fa-brands fa-amazon"></i>';
+                } else if (loja === 'mercadolivre') {
+                    btnClass = "bg-yellow-400 hover:bg-yellow-500 text-blue-900";
+                    btnText = "Ver no Mercado Livre";
+                    btnIcon = '<i class="fa-solid fa-handshake"></i>';
                 }
 
                 const card = `
                 <div class="bg-white border border-gray-200 rounded-lg p-3 md:p-4 hover:shadow-xl hover:-translate-y-1 transition duration-300 group cursor-pointer flex flex-col justify-between h-full relative overflow-hidden">
                     ${badge}
-                    
                     <a href="${p.link}" target="_blank" class="block h-full flex flex-col justify-between">
                         <div class="h-40 md:h-48 flex items-center justify-center mb-4 relative bg-white">
                             <img src="${p.image}" class="max-h-full max-w-full object-contain mix-blend-multiply group-hover:scale-105 transition duration-500" alt="${p.name}">
                         </div>
-
                         <div>
                             <h3 class="text-xs md:text-sm text-gray-700 font-medium leading-tight mb-2 line-clamp-2 group-hover:text-blue-700 group-hover:underline h-8 md:h-10">${p.name}</h3>
-                            
                             <div class="flex items-center gap-1 mb-2">
                                 <div class="flex">${gerarEstrelas(p.rating)}</div>
-                                <span class="text-[10px] text-gray-400 hidden md:inline">(${p.reviews.replace('reviews', '')})</span>
+                                <span class="text-[10px] text-gray-400 hidden md:inline">(${p.reviews ? p.reviews.replace('reviews', '') : '10'})</span>
                             </div>
-
-                            <div class="mb-3 price-container text-sm md:text-base">
-                                ${p.price}
-                            </div>
-
-                            <button class="w-full bg-brand-hover text-white font-bold py-2 rounded text-xs md:text-sm group-hover:bg-accent group-hover:text-brand transition shadow-sm mt-auto flex items-center justify-center gap-2">
-                                Ver na Shopee <i class="fa-solid fa-arrow-right"></i>
+                            <div class="mb-3 price-container text-sm md:text-base">${p.price}</div>
+                            <button class="w-full ${btnClass} font-bold py-2 rounded text-xs md:text-sm transition shadow-sm mt-auto flex items-center justify-center gap-2">
+                                ${btnText} ${btnIcon}
                             </button>
                         </div>
                     </a>
-                </div>
-                `;
+                </div>`;
                 grid.innerHTML += card;
             });
         }
 
-        // 4. FILTROS
-        function carregarProdutos(categoria) {
-            if (categoria === 'todos') {
-                renderizar(todosProdutos);
-            } else {
-                const filtrados = todosProdutos.filter(p => p.category === categoria);
-                renderizar(filtrados);
+        // CONTADOR DE VISITAS ÚNICAS (VIA REDIS)
+        async function carregarVisitas() {
+            const el = document.getElementById('total-visits');
+            const jaVisitou = localStorage.getItem('visited_v1');
+            let url = '/api/visits';
+            
+            if (!jaVisitou) {
+                url += '?new=true'; // Avisa API para somar +1
+                localStorage.setItem('visited_v1', 'true'); // Marca pulseirinha
+            }
+
+            try {
+                const res = await fetch(url);
+                const data = await res.json();
+                el.innerText = parseInt(data.visits).toLocaleString('pt-BR');
+            } catch(e) {
+                el.innerText = "+1.400";
             }
         }
 
-        // 5. BUSCA
-        function buscarProdutos() {
-            const termo = document.getElementById('search-input').value.toLowerCase();
-            const filtrados = todosProdutos.filter(p => p.name.toLowerCase().includes(termo));
-            renderizar(filtrados);
-        }
-        function buscarProdutosMobile() {
-            const termo = document.getElementById('search-input-mobile').value.toLowerCase();
-            const filtrados = todosProdutos.filter(p => p.name.toLowerCase().includes(termo));
-            renderizar(filtrados);
-        }
+        function carregarProdutos(cat) { cat === 'todos' ? renderizar(todosProdutos) : renderizar(todosProdutos.filter(p => p.category === cat)); }
+        function buscarProdutos() { const t = document.getElementById('search-input').value.toLowerCase(); renderizar(todosProdutos.filter(p => p.name.toLowerCase().includes(t))); }
+        function buscarProdutosMobile() { const t = document.getElementById('search-input-mobile').value.toLowerCase(); renderizar(todosProdutos.filter(p => p.name.toLowerCase().includes(t))); }
 
-        // 6. LIVE COUNTER (Simulação)
-        function monitorarAcessos() {
-            const el = document.getElementById('live-counter');
-            // Número aleatório entre 15 e 45 para parecer movimentado
-            const random = Math.floor(Math.random() * (45 - 15 + 1)) + 15;
-            el.innerText = random;
-        }
-        
         window.onload = () => {
             buscarDados();
-            setInterval(monitorarAcessos, 4000);
-            monitorarAcessos();
+            carregarVisitas();
         };
     </script>
 </body>

@@ -3,6 +3,10 @@
     {
       "source": "/api/v1/redirect",
       "destination": "/api/v1/redirect.js"
+    },
+    {
+      "source": "/api/visits",
+      "destination": "/api/visits.js"
     }
   ],
   "headers": [
