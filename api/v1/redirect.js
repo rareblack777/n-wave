@@ -1,13 +1,13 @@
 // api/v1/redirect.js
 
 const links = {
-    "01": "https://s.shopee.com.br/6falKJRE1N?share_channel_code=1",
-    "02": "https://s.shopee.com.br/8pfFwpm1Jv?share_channel_code=1",
-    "03": "https://s.shopee.com.br/4q97Bg9bDo?share_channel_code=1",
-    "04": "https://s.shopee.com.br/6puBaDoyJC?share_channel_code=1",
+    "01": "https://s.shopee.com.br/6VHnOzyGx4?share_channel_code=1",
+    "02": "https://s.shopee.com.br/7AXUCUbbDc?share_channel_code=1",
+    "03": "https://s.shopee.com.br/7AXUCZDeMn?share_channel_code=1",
+    "04": "https://s.shopee.com.br/1Vt7SbAiFf?share_channel_code=1",
     "05": "https://s.shopee.com.br/8APZCWqEqR?share_channel_code=1",
     "06": "https://s.shopee.com.br/9UuwmDdkY1?share_channel_code=1",
-    "07": "https://s.shopee.com.br/8pfGwuxSNW?share_channel_code=1",
+    "07": "https://s.shopee.com.br/4q9ZMHz2yz?share_channel_code=1",
     "08": "https://s.shopee.com.br/8APaAcPR3z?share_channel_code=1",
     "09": "https://s.shopee.com.br/2qO3oqMvss?share_channel_code=1",
     "10": "https://s.shopee.com.br/2qO3pOiKLY?share_channel_code=1",

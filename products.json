@@ -1,337 +1,552 @@
 [
     {
         "id": "01",
-        "name": "Mini Impressora Térmica Gatinho...",
-        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 179,00</span> R$ 116,35 <span class=\"text-[10px] text-green-400 ml-1\">-35%</span>",
+        "name": "Mini Impressora Térmica Gatinho",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 179,00</span> R$ 116,35 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
         "category": "tech",
-        "image": "https://down-br.img.susercontent.com/file/br-11134207-7r98o-lpmm0jzw37dn69@resize_w450_nl.webp",
-        "link": "/api/v1/redirect?id=01",
-        "sales": "405 Vendidos",
+        "image": "https://cdn-icons-png.flaticon.com/512/3067/3067260.png",
+        "link": "https://shopee.com.br/search?keyword=Mini+Impressora+Térmica+Gatinho",
+        "sales": "+5mil vendidos",
         "rating": "4.8",
-        "reviews": "228 reviews"
+        "reviews": "100 reviews"
     },
-
     {
         "id": "02",
-        "name": "MINI MOP Esfregão Portátil Dobrável Rodo Para Limpeza Branco",
-        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 27,91</span> R$ 18,99 <span class=\"text-[10px] text-green-400 ml-1\">-32%</span>",
+        "name": "Mini MOP Esfregão Portátil",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 29,90</span> R$ 18,99 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
         "category": "home",
-        "image": "https://down-br.img.susercontent.com/file/br-11134207-7r98q-ll58giysdbme7c@resize_w450_nl.webp",
-        "link": "/api/v1/redirect?id=02",
-        "sales": "14 Vendidos",
+        "image": "https://cdn-icons-png.flaticon.com/512/3081/3081840.png",
+        "link": "https://shopee.com.br/search?keyword=Mini+MOP+Esfregão+Portátil",
+        "sales": "+10mil vendidos",
         "rating": "4.8",
-        "reviews": "9 reviews"
+        "reviews": "100 reviews"
     },
-
     {
         "id": "03",
-        "name": "Luminária Rgb Caixa Som G Speaker Carregador Indução Relógio",
-        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 56,88 - R$ 68,88</span> <br>R$ 52,33 - R$ 58,88 <span class=\"text-[10px] text-green-400 ml-1\">-8%</span>",
-        "category": "tech",
-        "image": "https://down-br.img.susercontent.com/file/br-11134207-7r98o-lksfktuqgbjnd7@resize_w450_nl.webp",
-        "link": "/api/v1/redirect?id=03",
-        "sales": "+10mil Vendidos",
+        "name": "Escova de Limpeza Elétrica 5 em 1",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 89,90</span> R$ 39,90 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
+        "category": "home",
+        "image": "https://cdn-icons-png.flaticon.com/512/3081/3081840.png",
+        "link": "https://shopee.com.br/search?keyword=Escova+de+Limpeza+Elétrica+5+em+1",
+        "sales": "Viral TikTok",
         "rating": "4.8",
-        "reviews": "7mil reviews"
+        "reviews": "100 reviews"
     },
-
     {
         "id": "04",
-        "name": "Mini Processador de Alimentos, Elétrico Portátil USB (250ml)",
-        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 40,00 - R$ 160,00</span> <br>R$ 19,50 - R$ 69,91 <span class=\"text-[10px] text-green-400 ml-1\">-51%</span>",
+        "name": "Luz LED com Sensor de Presença",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 35,00</span> R$ 14,90 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
         "category": "home",
-        "image": "https://down-br.img.susercontent.com/file/br-11134207-7r98o-m84m5543nwmpb9@resize_w450_nl.webp",
-        "link": "/api/v1/redirect?id=04",
-        "sales": "+90mil Vendidos",
-        "rating": "4.6",
-        "reviews": "55,1mil reviews"
+        "image": "https://cdn-icons-png.flaticon.com/512/3081/3081840.png",
+        "link": "https://shopee.com.br/search?keyword=Luz+LED+com+Sensor+de+Presença",
+        "sales": "+2mil vendidos",
+        "rating": "4.8",
+        "reviews": "100 reviews"
     },
-
     {
         "id": "05",
-        "name": "Smart Projetor Portátil HY300 Android 11 (Suporte 4K)",
-        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\"> R$ 239,90 </span> R$ 215,91 <span class=\"text-[10px] text-green-400 ml-1\">-10%</span>",
-        "category": "tech",
-        "image": "https://down-br.img.susercontent.com/file/br-11134207-7r98o-lxb15ke21th236@resize_w450_nl.webp",
-        "link": "/api/v1/redirect?id=05",
-        "sales": "+4mil Vendidos",
+        "name": "Umidificador Anti-Gravidade",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 150,00</span> R$ 75,00 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
+        "category": "home",
+        "image": "https://cdn-icons-png.flaticon.com/512/3081/3081840.png",
+        "link": "https://shopee.com.br/search?keyword=Umidificador+Anti-Gravidade",
+        "sales": "Tendência",
         "rating": "4.8",
-        "reviews": "2,3mil reviews"
+        "reviews": "100 reviews"
     },
-
     {
         "id": "06",
-        "name": "Basike Power Bank Ultra Thin 10000mAh Indução Magsafe",
-        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 180,00</span> R$ 110,00<span class=\"text-[10px] text-green-400 ml-1\">-38%</span>",
-        "category": "tech",
-        "image": "https://down-br.img.susercontent.com/file/br-11134207-7r98o-m8btvrd1ue4105@resize_w450_nl.webp",
-        "link": "/api/v1/redirect?id=06",
-        "sales": "+2mil Vendidos",
-        "rating": "4.9",
-        "reviews": "1,1mil reviews"
+        "name": "Mini Seladora de Embalagens",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 39,90</span> R$ 19,90 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
+        "category": "home",
+        "image": "https://cdn-icons-png.flaticon.com/512/3081/3081840.png",
+        "link": "https://shopee.com.br/search?keyword=Mini+Seladora+de+Embalagens",
+        "sales": "+30mil vendidos",
+        "rating": "4.8",
+        "reviews": "100 reviews"
     },
-
     {
         "id": "07",
-        "name": "fone de ouvido sem fio (ear clip)bluetooth fon-13025",
-        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 180,00</span> R$ 69,00<span class=\"text-[10px] text-green-400 ml-1\">-61%</span>",
-        "category": "tech",
-        "image": "https://down-br.img.susercontent.com/file/sg-11134201-8224y-mhg53ijwdukl75@resize_w450_nl.webp",
-        "link": "/api/v1/redirect?id=07",
-        "sales": "210 Vendidos",
-        "rating": "4.9",
-        "reviews": "135 reviews"
+        "name": "Tira Pelos Elétrico de Roupas",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 70,00</span> R$ 45,00 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
+        "category": "home",
+        "image": "https://cdn-icons-png.flaticon.com/512/3081/3081840.png",
+        "link": "https://shopee.com.br/search?keyword=Tira+Pelos+Elétrico+de+Roupas",
+        "sales": "+1mil vendidos",
+        "rating": "4.8",
+        "reviews": "100 reviews"
     },
-
     {
         "id": "08",
-        "name": "Watch X Smartwatch Relogio Serie 10 Amoled Nfc Chat GPT Original",
-        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 292,49</span> <br> R$ 194,89 - R$ 224,89<span class=\"text-[10px] text-green-400 ml-1\">-33%</span>",
-        "category": "tech",
-        "image": "https://down-br.img.susercontent.com/file/sg-11134201-7rd4v-lvrr7762c98ib1@resize_w450_nl.webp",
-        "link": "/api/v1/redirect?id=08",
-        "sales": "à venda",
+        "name": "Dispensador Automático Pasta de Dente",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 59,90</span> R$ 29,90 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
+        "category": "home",
+        "image": "https://cdn-icons-png.flaticon.com/512/3081/3081840.png",
+        "link": "https://shopee.com.br/search?keyword=Dispensador+Automático+Pasta+de+Dente",
+        "sales": "Utilidade",
         "rating": "4.8",
-        "reviews": "5,4mil reviews"
+        "reviews": "100 reviews"
     },
-
     {
         "id": "09",
-        "name": "Kit Escova De Limpeza 5 Em 1 Teclado Hagibis Fone De Ouvido",
-        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 7,99 - R$ 29,99</span> <br> R$ 7,60 - R$ 29,99<span class=\"text-[10px] text-green-400 ml-1\">-5%</span>",
-        "category": "tech",
-        "image": "https://down-br.img.susercontent.com/file/sg-11134201-7rbk6-ln29kkao4kqf69@resize_w450_nl.webp",
-        "link": "/api/v1/redirect?id=09",
-        "sales": "612 Vendidos",
+        "name": "Rodo Mágico Limpa Vidros Magnético",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 120,00</span> R$ 55,00 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
+        "category": "home",
+        "image": "https://cdn-icons-png.flaticon.com/512/3081/3081840.png",
+        "link": "https://shopee.com.br/search?keyword=Rodo+Mágico+Limpa+Vidros+Magnético",
+        "sales": "Alta Procura",
         "rating": "4.8",
-        "reviews": "226 reviews"
+        "reviews": "100 reviews"
     },
-
     {
         "id": "10",
-        "name": "Ventilador de Pescoço Portátil Silencioso (USB)",
-        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 38,99 - R$ 39,99</span> R$ 89,00<span class=\"text-[10px] text-green-400 ml-1\">-56%</span>",
-        "category": "tech",
-        "image": "https://down-br.img.susercontent.com/file/br-11134207-7r98o-lyirhwovryqd56@resize_w450_nl.webp",
-        "link": "/api/v1/redirect?id=10",
-        "sales": "+1mil Vendidos",
-        "rating": "4.6",
-        "reviews": "578 reviews"
+        "name": "Fita Nano Grip Dupla Face",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 25,00</span> R$ 12,90 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
+        "category": "home",
+        "image": "https://cdn-icons-png.flaticon.com/512/3081/3081840.png",
+        "link": "https://shopee.com.br/search?keyword=Fita+Nano+Grip+Dupla+Face",
+        "sales": "+50mil vendidos",
+        "rating": "4.8",
+        "reviews": "100 reviews"
     },
-
     {
         "id": "11",
-        "name": "Máquina de Cortar Cabelo Barbeiro Dragão Profissional Recarregável",
-        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 80,00</span> R$ 20,99<span class=\"text-[10px] text-green-400 ml-1\">-74%</span>",
-        "category": "tech",
-        "image": "https://down-br.img.susercontent.com/file/br-11134207-7r98o-mcd0uzbv2j1cce@resize_w450_nl.webp",
-        "link": "/api/v1/redirect?id=11",
-        "sales": "+500mil Vendidos",
-        "rating": "4.7",
-        "reviews": "271,1mil reviews"
+        "name": "Tapete Super Absorvente",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 60,00</span> R$ 29,90 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
+        "category": "home",
+        "image": "https://cdn-icons-png.flaticon.com/512/3081/3081840.png",
+        "link": "https://shopee.com.br/search?keyword=Tapete+Super+Absorvente",
+        "sales": "Secagem Rápida",
+        "rating": "4.8",
+        "reviews": "100 reviews"
     },
-
     {
         "id": "12",
-        "name": "Câmera Externa WiFi Dual Lens 6MP 360° (PTZ), À Prova D'água-G1",
-        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 300,00</span> R$ 117,99 <span class=\"text-[10px] text-green-400 ml-1\">-61%</span>",
-        "category": "tech",
-        "image": "https://down-br.img.susercontent.com/file/br-11134207-81z1k-mglwc89rqd532f@resize_w450_nl.webp",
-        "link": "/api/v1/redirect?id=12",
-        "sales": "à venda",
-        "rating": "4.7",
-        "reviews": "602 reviews"
+        "name": "Saco à Vácuo para Roupas",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 30,00</span> R$ 15,90 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
+        "category": "home",
+        "image": "https://cdn-icons-png.flaticon.com/512/3081/3081840.png",
+        "link": "https://shopee.com.br/search?keyword=Saco+à+Vácuo+para+Roupas",
+        "sales": "Organização",
+        "rating": "4.8",
+        "reviews": "100 reviews"
     },
-
     {
         "id": "13",
-        "name": "Liquidificador Portátil Mini, Original Fresh Juice Elétrico",
-        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 217,83 - R$ 439,98</span> <br> R$ 115,64 - R$ 244,02<span class=\"text-[10px] text-green-400 ml-1\">-61%</span>",
+        "name": "Mini Processador de Alimentos USB",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 60,00</span> R$ 29,90 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
         "category": "home",
-        "image": "https://down-br.img.susercontent.com/file/661b2863f64b94ac187ce885b85ab6df@resize_w450_nl.webp",
-        "link": "/api/v1/redirect?id=13",
-        "sales": "+5mil Vendidos",
-        "rating": "4.7",
-        "reviews": "1,7mil reviews"
+        "image": "https://cdn-icons-png.flaticon.com/512/3081/3081840.png",
+        "link": "https://shopee.com.br/search?keyword=Mini+Processador+de+Alimentos+USB",
+        "sales": "+100mil vendidos",
+        "rating": "4.8",
+        "reviews": "100 reviews"
     },
-
     {
         "id": "14",
-        "name": "Organizador Multifuncional 4 em 1 (Dispenser & Suporte)",
-        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 231,02 - R$ 411,54</span> <br> R$ 106,27 - R$ 189,31 <span class=\"text-[10px] text-green-400 ml-1\">-54%</span>",
+        "name": "Liquidificador Portátil Fresh Juice",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 120,00</span> R$ 59,90 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
         "category": "home",
-        "image": "https://down-br.img.susercontent.com/file/bbf751885ec283b073744b93c8bc80ee@resize_w450_nl.webp",
-        "link": "/api/v1/redirect?id=14",
-        "sales": "+1mil Vendidos",
+        "image": "https://cdn-icons-png.flaticon.com/512/3081/3081840.png",
+        "link": "https://shopee.com.br/search?keyword=Liquidificador+Portátil+Fresh+Juice",
+        "sales": "Sucesso",
         "rating": "4.8",
-        "reviews": "(555 reviews)"
+        "reviews": "100 reviews"
     },
-
     {
         "id": "15",
-        "name": "Umidificador Visual Anti-Gravidade + Relógio LED",
-        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 200,00</span> R$ 75,04 <span class=\"text-[10px] text-green-400 ml-1\">-62%</span>",
+        "name": "Dispensador de Óleo Spray",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 40,00</span> R$ 19,90 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
         "category": "home",
-        "image": "https://down-br.img.susercontent.com/file/sg-11134201-7rd4p-lu6sz2o5gbev37@resize_w450_nl.webp",
-        "link": "/api/v1/redirect?id=15",
-        "sales": "+1mil Vendidos",
-        "rating": "4.7",
-        "reviews": "(879 reviews)"
+        "image": "https://cdn-icons-png.flaticon.com/512/3081/3081840.png",
+        "link": "https://shopee.com.br/search?keyword=Dispensador+de+Óleo+Spray",
+        "sales": "Essencial Airfryer",
+        "rating": "4.8",
+        "reviews": "100 reviews"
     },
-
     {
         "id": "16",
-        "name": "Mini Seladora Portátil USB 2 em 1 (Sela e Corta)",
-        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 39,99</span> R$ 21,90 <span class=\"text-[10px] text-green-400 ml-1\">-45%</span>",
+        "name": "Copo Térmico com Medidor Digital",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 70,00</span> R$ 35,00 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
         "category": "home",
-        "image": "https://down-br.img.susercontent.com/file/br-11134207-7r98o-m8hn0g4ohdrl49@resize_w450_nl.webp",
-        "link": "/api/v1/redirect?id=16",
-        "sales": "+30mil Vendidos",
-        "rating": "4.6",
-        "reviews": "(14,9mil reviews)"
+        "image": "https://cdn-icons-png.flaticon.com/512/3081/3081840.png",
+        "link": "https://shopee.com.br/search?keyword=Copo+Térmico+com+Medidor+Digital",
+        "sales": "Novidade",
+        "rating": "4.8",
+        "reviews": "100 reviews"
     },
-
     {
         "id": "17",
-        "name": "Escova De Limpeza Multifuncional Elétrica Sem Fio 5 Em 1",
-        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 89,90</span> R$ 33,27 <span class=\"text-[10px] text-green-400 ml-1\">-63%</span>",
+        "name": "Afiador de Facas 3 Estágios",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 50,00</span> R$ 25,00 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
         "category": "home",
-        "image": "https://down-br.img.susercontent.com/file/br-11134207-7r98o-m527v5unmuth56@resize_w450_nl.webp",
-        "link": "/api/v1/redirect?id=17",
-        "sales": "+70mil Vendidos",
-        "rating": "4.7",
-        "reviews": "(36,7mil reviews)"
+        "image": "https://cdn-icons-png.flaticon.com/512/3081/3081840.png",
+        "link": "https://shopee.com.br/search?keyword=Afiador+de+Facas+3+Estágios",
+        "sales": "+5mil vendidos",
+        "rating": "4.8",
+        "reviews": "100 reviews"
     },
-
     {
         "id": "18",
-        "name": "Kit 2 em 1 Tapete Tecnológico Super Absorvente (Secagem Instantânea)",
-        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 30,00 - R$ 68,88</span> <br> R$ 19,49 - R$ 39,99 <span class=\"text-[10px] text-green-400 ml-1\">-35%</span>",
+        "name": "Máquina de Fazer Dumpling/Pastel",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 80,00</span> R$ 39,90 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
         "category": "home",
-        "image": "https://down-br.img.susercontent.com/file/br-11134207-81z1k-mghzj2nqic5g65@resize_w450_nl.webp",
-        "link": "/api/v1/redirect?id=18",
-        "sales": "+4mil Vendidos",
+        "image": "https://cdn-icons-png.flaticon.com/512/3081/3081840.png",
+        "link": "https://shopee.com.br/search?keyword=Máquina+de+Fazer+Dumpling/Pastel",
+        "sales": "Viral Cozinha",
         "rating": "4.8",
-        "reviews": "(1,6mil reviews)"
+        "reviews": "100 reviews"
     },
-
     {
         "id": "19",
-        "name": "Kit Forma de Gelo \"One Press\" com Depósito e Pá",
-        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\"></span> R$ 99,00 <span class=\"text-[10px] text-green-400 ml-1\"></span>",
+        "name": "Forma de Gelo One Press",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 99,00</span> R$ 49,90 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
         "category": "home",
-        "image": "https://down-br.img.susercontent.com/file/sg-11134201-7reou-m2cp36b64aqefd@resize_w450_nl.webp",
-        "link": "/api/v1/redirect?id=19",
-        "sales": "306 Vendidos",
-        "rating": "4.5",
-        "reviews": "(112 reviews)"
+        "image": "https://cdn-icons-png.flaticon.com/512/3081/3081840.png",
+        "link": "https://shopee.com.br/search?keyword=Forma+de+Gelo+One+Press",
+        "sales": "Praticidade",
+        "rating": "4.8",
+        "reviews": "100 reviews"
     },
-
     {
         "id": "20",
-        "name": "Barra LED Magnética Inteligente com Sensor de Presença",
-        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 32,00 - R$ 128,00</span> <br> R$ 14,90 - R$ 57,90 <span class=\"text-[10px] text-green-400 ml-1\">-53%</span>",
+        "name": "Mini Balança Digital de Precisão",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 40,00</span> R$ 19,90 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
         "category": "home",
-        "image": "https://down-br.img.susercontent.com/file/sg-11134201-7repf-m22lehps5d6fda@resize_w450_nl.webp",
-        "link": "/api/v1/redirect?id=20",
-        "sales": "+20mil Vendidos",
+        "image": "https://cdn-icons-png.flaticon.com/512/3081/3081840.png",
+        "link": "https://shopee.com.br/search?keyword=Mini+Balança+Digital+de+Precisão",
+        "sales": "+10mil vendidos",
         "rating": "4.8",
-        "reviews": "(12,9mil reviews)"
+        "reviews": "100 reviews"
     },
-
     {
         "id": "21",
-        "name": "Teclado Gamer K500-B61 Compacto 60% RGB",
-        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">  </span> R$ 199,90 - R$ 299,90 <span class=\"text-[10px] text-green-400 ml-1\"></span>",
-        "category": "gamer",
-        "image": "https://down-br.img.susercontent.com/file/br-11134207-7r98o-lvgyx5b9avtsfa@resize_w450_nl.webp",
-        "link": "/api/v1/redirect?id=21",
-        "sales": "409 Vendidos",
-        "rating": "5.0",
-        "reviews": "(195 reviews)"
+        "name": "Cortador de Legumes Mandoline",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 90,00</span> R$ 45,00 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
+        "category": "home",
+        "image": "https://cdn-icons-png.flaticon.com/512/3081/3081840.png",
+        "link": "https://shopee.com.br/search?keyword=Cortador+de+Legumes+Mandoline",
+        "sales": "Masterchef",
+        "rating": "4.8",
+        "reviews": "100 reviews"
     },
-
     {
         "id": "22",
-        "name": "Mousepad Gamer RGB Extra Grande 80x30cm 7 cores (Speed)",
-        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\"> R$ 75,50 </span> <br> R$ 41,53 - R$ 75,50 <span class=\"text-[10px] text-green-400 ml-1\">-45%</span>",
-        "category": "gamer",
-        "image": "https://down-br.img.susercontent.com/file/72b0beb61729fad2c6c2e07f464cf4e0@resize_w450_nl.webp",
-        "link": "/api/v1/redirect?id=22",
-        "sales": "406 Vendidos",
-        "rating": "4.9",
-        "reviews": "(229 reviews)"
+        "name": "Tampas de Silicone Extensíveis",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 30,00</span> R$ 15,90 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
+        "category": "home",
+        "image": "https://cdn-icons-png.flaticon.com/512/3081/3081840.png",
+        "link": "https://shopee.com.br/search?keyword=Tampas+de+Silicone+Extensíveis",
+        "sales": "Eco Friendly",
+        "rating": "4.8",
+        "reviews": "100 reviews"
     },
-
     {
         "id": "23",
-        "name": "Kit Neon Smart Tuya RGB 12V",
-        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\"> R$ 104,70 - R$ 209,80 </span> <br> R$ 73,29 - R$ 146,86 <span class=\"text-[10px] text-green-400 ml-1\">-30%</span>",
-        "category": "gamer",
-        "image": "https://down-br.img.susercontent.com/file/cn-11134207-7r98o-lyosy8s7dl7m45@resize_w450_nl.webp",
-        "link": "/api/v1/redirect?id=23",
-        "sales": "42 Vendidos",
-        "rating": "4.9",
-        "reviews": "(8 reviews)"
+        "name": "Espremedor de Alho Inox Rocker",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 35,00</span> R$ 18,90 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
+        "category": "home",
+        "image": "https://cdn-icons-png.flaticon.com/512/3081/3081840.png",
+        "link": "https://shopee.com.br/search?keyword=Espremedor+de+Alho+Inox+Rocker",
+        "sales": "Fácil Uso",
+        "rating": "4.8",
+        "reviews": "100 reviews"
     },
-
     {
         "id": "24",
-        "name": "Suporte Rgb Para Fone De Ouvido Aikino Msy-9990",
-        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">  </span> R$ 51,00 <span class=\"text-[10px] text-green-400 ml-1\"></span>",
-        "category": "gamer",
-        "image": "https://down-br.img.susercontent.com/file/sg-11134201-8258u-mfvjlgyejw96f3@resize_w450_nl.webp",
-        "link": "/api/v1/redirect?id=24",
-        "sales": "15 Vendidos",
-        "rating": "4.6",
-        "reviews": "(9 reviews)"
+        "name": "Caneca Mixer Magnética Automática",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 90,00</span> R$ 45,00 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
+        "category": "home",
+        "image": "https://cdn-icons-png.flaticon.com/512/3081/3081840.png",
+        "link": "https://shopee.com.br/search?keyword=Caneca+Mixer+Magnética+Automática",
+        "sales": "Café Tech",
+        "rating": "4.8",
+        "reviews": "100 reviews"
     },
-
     {
         "id": "25",
-        "name": "Speaker Retro Smart Divoom Ditoo-Pro Pixel Art (Teclado Mecânico)",
-        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\"> R$ 750,00 </span> R$ 639,90 <span class=\"text-[10px] text-green-400 ml-1\">-15%</span>",
+        "name": "Console Portátil R36S (+15k Jogos)",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 450,00</span> R$ 184,99 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
         "category": "gamer",
-        "image": "https://down-br.img.susercontent.com/file/sg-11134201-7rcdy-m6hv5zruwvihb3@resize_w450_nl.webp",
-        "link": "/api/v1/redirect?id=25",
-        "sales": "à venda",
-        "rating": "5.0",
-        "reviews": "(8 reviews)"
+        "image": "https://cdn-icons-png.flaticon.com/512/3408/3408506.png",
+        "link": "https://shopee.com.br/search?keyword=Console+Portátil+R36S+(+15k+Jogos)",
+        "sales": "Top 1 Gamer",
+        "rating": "4.8",
+        "reviews": "100 reviews"
     },
-
     {
         "id": "26",
-        "name": "Console Portátil Retrô R36S 64GB (+15.000 Jogos)",
-        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\"> R$ 480,00 </span> <br> R$ 184,99 - R$ 195,99 <span class=\"text-[10px] text-green-400 ml-1\">-61%</span>",
-        "category": "gamer",
-        "image": "https://down-br.img.susercontent.com/file/br-11134207-7r98o-m3azpdpp7bxxe2@resize_w450_nl.webp",
-        "link": "/api/v1/redirect?id=26",
-        "sales": "+10mil Vendidos",
-        "rating": "4.7",
-        "reviews": "(5,9mil reviews)"
+        "name": "Projetor Smart HY300 4K",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 600,00</span> R$ 280,00 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
+        "category": "tech",
+        "image": "https://cdn-icons-png.flaticon.com/512/3067/3067260.png",
+        "link": "https://shopee.com.br/search?keyword=Projetor+Smart+HY300+4K",
+        "sales": "Cinema em Casa",
+        "rating": "4.8",
+        "reviews": "100 reviews"
     },
-
     {
         "id": "27",
-        "name": "Microfone Gamer Condensador USB RGB (Stream & Podcast)",
-        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\"> R$ 253,67 </span> R$ 98,79 <span class=\"text-[10px] text-green-400 ml-1\"></span>",
-        "category": "gamer",
-        "image": "https://down-br.img.susercontent.com/file/cn-11134207-820l4-mghbkepxd53i33@resize_w450_nl.webp",
-        "link": "/api/v1/redirect?id=27",
-        "sales": "+1mil Vendidos",
-        "rating": "4.9",
-        "reviews": "(562 reviews)"
+        "name": "Fone Ear Clip (Brinco)",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 150,00</span> R$ 69,00 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
+        "category": "tech",
+        "image": "https://cdn-icons-png.flaticon.com/512/3067/3067260.png",
+        "link": "https://shopee.com.br/search?keyword=Fone+Ear+Clip+(Brinco)",
+        "sales": "Futurista",
+        "rating": "4.8",
+        "reviews": "100 reviews"
     },
-
     {
         "id": "28",
-        "name": "Par de Luvas de Dedo Gamer Pro (Fibra de Prata)",
-        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\"> R$ 29,99 </span> R$ 19,99 <span class=\"text-[10px] text-green-400 ml-1\">-33%</span>",
+        "name": "Luminária G-Speaker RGB",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 120,00</span> R$ 55,00 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
+        "category": "tech",
+        "image": "https://cdn-icons-png.flaticon.com/512/3067/3067260.png",
+        "link": "https://shopee.com.br/search?keyword=Luminária+G-Speaker+RGB",
+        "sales": "Decoração",
+        "rating": "4.8",
+        "reviews": "100 reviews"
+    },
+    {
+        "id": "29",
+        "name": "Teclado Mecânico Gamer K500",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 300,00</span> R$ 199,00 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
         "category": "gamer",
-        "image": "https://down-br.img.susercontent.com/file/br-11134207-7r98o-m3mgiwba32glbc@resize_w450_nl.webp",
-        "link": "/api/v1/redirect?id=28",
-        "sales": "514 Vendidos",
-        "rating": "4.9",
-        "reviews": "(232 reviews)"
+        "image": "https://cdn-icons-png.flaticon.com/512/3408/3408506.png",
+        "link": "https://shopee.com.br/search?keyword=Teclado+Mecânico+Gamer+K500",
+        "sales": "Custo Benefício",
+        "rating": "4.8",
+        "reviews": "100 reviews"
+    },
+    {
+        "id": "30",
+        "name": "Power Bank Transparente",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 180,00</span> R$ 89,00 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
+        "category": "tech",
+        "image": "https://cdn-icons-png.flaticon.com/512/3067/3067260.png",
+        "link": "https://shopee.com.br/search?keyword=Power+Bank+Transparente",
+        "sales": "Cyberpunk",
+        "rating": "4.8",
+        "reviews": "100 reviews"
+    },
+    {
+        "id": "31",
+        "name": "Ventilador de Pescoço",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 80,00</span> R$ 39,90 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
+        "category": "tech",
+        "image": "https://cdn-icons-png.flaticon.com/512/3067/3067260.png",
+        "link": "https://shopee.com.br/search?keyword=Ventilador+de+Pescoço",
+        "sales": "Verão",
+        "rating": "4.8",
+        "reviews": "100 reviews"
+    },
+    {
+        "id": "32",
+        "name": "Microfone de Lapela Wireless",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 100,00</span> R$ 49,90 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
+        "category": "tech",
+        "image": "https://cdn-icons-png.flaticon.com/512/3067/3067260.png",
+        "link": "https://shopee.com.br/search?keyword=Microfone+de+Lapela+Wireless",
+        "sales": "Creators",
+        "rating": "4.8",
+        "reviews": "100 reviews"
+    },
+    {
+        "id": "33",
+        "name": "Kit Limpeza de Teclado",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 50,00</span> R$ 25,00 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
+        "category": "tech",
+        "image": "https://cdn-icons-png.flaticon.com/512/3067/3067260.png",
+        "link": "https://shopee.com.br/search?keyword=Kit+Limpeza+de+Teclado",
+        "sales": "Satisfatório",
+        "rating": "4.8",
+        "reviews": "100 reviews"
+    },
+    {
+        "id": "34",
+        "name": "Mousepad Gamer RGB Extra Grande",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 120,00</span> R$ 59,90 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
+        "category": "gamer",
+        "image": "https://cdn-icons-png.flaticon.com/512/3408/3408506.png",
+        "link": "https://shopee.com.br/search?keyword=Mousepad+Gamer+RGB+Extra+Grande",
+        "sales": "Setup",
+        "rating": "4.8",
+        "reviews": "100 reviews"
+    },
+    {
+        "id": "35",
+        "name": "Suporte Celular Rastreamento Facial",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 160,00</span> R$ 79,90 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
+        "category": "tech",
+        "image": "https://cdn-icons-png.flaticon.com/512/3067/3067260.png",
+        "link": "https://shopee.com.br/search?keyword=Suporte+Celular+Rastreamento+Facial",
+        "sales": "Live",
+        "rating": "4.8",
+        "reviews": "100 reviews"
+    },
+    {
+        "id": "36",
+        "name": "Adaptador Bluetooth Veicular",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 30,00</span> R$ 15,00 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
+        "category": "tech",
+        "image": "https://cdn-icons-png.flaticon.com/512/3067/3067260.png",
+        "link": "https://shopee.com.br/search?keyword=Adaptador+Bluetooth+Veicular",
+        "sales": "Carro Smart",
+        "rating": "4.8",
+        "reviews": "100 reviews"
+    },
+    {
+        "id": "37",
+        "name": "Massageador de Pescoço EMS",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 60,00</span> R$ 29,90 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
+        "category": "home",
+        "image": "https://cdn-icons-png.flaticon.com/512/3081/3081840.png",
+        "link": "https://shopee.com.br/search?keyword=Massageador+de+Pescoço+EMS",
+        "sales": "Relax",
+        "rating": "4.8",
+        "reviews": "100 reviews"
+    },
+    {
+        "id": "38",
+        "name": "Corretor Postural Inteligente",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 90,00</span> R$ 45,00 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
+        "category": "home",
+        "image": "https://cdn-icons-png.flaticon.com/512/3081/3081840.png",
+        "link": "https://shopee.com.br/search?keyword=Corretor+Postural+Inteligente",
+        "sales": "Saúde",
+        "rating": "4.8",
+        "reviews": "100 reviews"
+    },
+    {
+        "id": "39",
+        "name": "Sunset Lamp (Lâmpada Pôr do Sol)",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 50,00</span> R$ 25,00 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
+        "category": "home",
+        "image": "https://cdn-icons-png.flaticon.com/512/3081/3081840.png",
+        "link": "https://shopee.com.br/search?keyword=Sunset+Lamp+(Lâmpada+Pôr+do+Sol)",
+        "sales": "Fotos",
+        "rating": "4.8",
+        "reviews": "100 reviews"
+    },
+    {
+        "id": "40",
+        "name": "Mini Barbeador Elétrico",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 70,00</span> R$ 35,00 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
+        "category": "tech",
+        "image": "https://cdn-icons-png.flaticon.com/512/3067/3067260.png",
+        "link": "https://shopee.com.br/search?keyword=Mini+Barbeador+Elétrico",
+        "sales": "Portátil",
+        "rating": "4.8",
+        "reviews": "100 reviews"
+    },
+    {
+        "id": "41",
+        "name": "Depilador de Cristal",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 40,00</span> R$ 19,90 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
+        "category": "home",
+        "image": "https://cdn-icons-png.flaticon.com/512/3081/3081840.png",
+        "link": "https://shopee.com.br/search?keyword=Depilador+de+Cristal",
+        "sales": "Sem Dor",
+        "rating": "4.8",
+        "reviews": "100 reviews"
+    },
+    {
+        "id": "42",
+        "name": "Espelho LED Maquiagem",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 80,00</span> R$ 39,90 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
+        "category": "home",
+        "image": "https://cdn-icons-png.flaticon.com/512/3081/3081840.png",
+        "link": "https://shopee.com.br/search?keyword=Espelho+LED+Maquiagem",
+        "sales": "Beleza",
+        "rating": "4.8",
+        "reviews": "100 reviews"
+    },
+    {
+        "id": "43",
+        "name": "Tapete Massageador de Pés",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 60,00</span> R$ 29,90 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
+        "category": "home",
+        "image": "https://cdn-icons-png.flaticon.com/512/3081/3081840.png",
+        "link": "https://shopee.com.br/search?keyword=Tapete+Massageador+de+Pés",
+        "sales": "Alívio",
+        "rating": "4.8",
+        "reviews": "100 reviews"
+    },
+    {
+        "id": "44",
+        "name": "Aspirador Portátil Carro",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 100,00</span> R$ 49,90 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
+        "category": "tech",
+        "image": "https://cdn-icons-png.flaticon.com/512/3067/3067260.png",
+        "link": "https://shopee.com.br/search?keyword=Aspirador+Portátil+Carro",
+        "sales": "Potente",
+        "rating": "4.8",
+        "reviews": "100 reviews"
+    },
+    {
+        "id": "45",
+        "name": "Suporte Celular Gravitacional",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 40,00</span> R$ 19,90 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
+        "category": "tech",
+        "image": "https://cdn-icons-png.flaticon.com/512/3067/3067260.png",
+        "link": "https://shopee.com.br/search?keyword=Suporte+Celular+Gravitacional",
+        "sales": "Carro",
+        "rating": "4.8",
+        "reviews": "100 reviews"
+    },
+    {
+        "id": "46",
+        "name": "Lixeira Carro Impermeável",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 50,00</span> R$ 25,00 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
+        "category": "home",
+        "image": "https://cdn-icons-png.flaticon.com/512/3081/3081840.png",
+        "link": "https://shopee.com.br/search?keyword=Lixeira+Carro+Impermeável",
+        "sales": "Organização",
+        "rating": "4.8",
+        "reviews": "100 reviews"
+    },
+    {
+        "id": "47",
+        "name": "Cristalizador de Vidros Spray",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 60,00</span> R$ 29,90 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
+        "category": "home",
+        "image": "https://cdn-icons-png.flaticon.com/512/3081/3081840.png",
+        "link": "https://shopee.com.br/search?keyword=Cristalizador+de+Vidros+Spray",
+        "sales": "Chuva",
+        "rating": "4.8",
+        "reviews": "100 reviews"
+    },
+    {
+        "id": "48",
+        "name": "LED Neon Painel Carro",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 70,00</span> R$ 35,00 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
+        "category": "tech",
+        "image": "https://cdn-icons-png.flaticon.com/512/3067/3067260.png",
+        "link": "https://shopee.com.br/search?keyword=LED+Neon+Painel+Carro",
+        "sales": "Tuning",
+        "rating": "4.8",
+        "reviews": "100 reviews"
+    },
+    {
+        "id": "49",
+        "name": "Organizador Banco Traseiro",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 80,00</span> R$ 39,90 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
+        "category": "home",
+        "image": "https://cdn-icons-png.flaticon.com/512/3081/3081840.png",
+        "link": "https://shopee.com.br/search?keyword=Organizador+Banco+Traseiro",
+        "sales": "Família",
+        "rating": "4.8",
+        "reviews": "100 reviews"
+    },
+    {
+        "id": "50",
+        "name": "Som Automotivo Bluetooth",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 140,00</span> R$ 69,90 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
+        "category": "tech",
+        "image": "https://cdn-icons-png.flaticon.com/512/3067/3067260.png",
+        "link": "https://shopee.com.br/search?keyword=Som+Automotivo+Bluetooth",
+        "sales": "Básico",
+        "rating": "4.8",
+        "reviews": "100 reviews"
     }
 ]
