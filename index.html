@@ -15,7 +15,6 @@
                     colors: {
                         brand: { DEFAULT: '#0f172a', hover: '#1e293b' },
                         accent: { DEFAULT: '#fbbf24', hover: '#d97706' },
-                        danger: '#ef4444'
                     },
                     fontFamily: { sans: ['Roboto', 'sans-serif'] }
                 }
@@ -35,12 +34,12 @@
     <div class="bg-gray-900 text-gray-400 text-xs py-2 hidden md:block border-b border-gray-800">
         <div class="max-w-[1280px] mx-auto px-4 flex justify-between items-center">
             <div class="flex gap-4">
-                <span><i class="fa-solid fa-check-circle mr-1 text-green-500"></i> Curadoria Verificada</span>
-                <span><i class="fa-solid fa-shield-alt mr-1 text-blue-500"></i> Compra Segura</span>
+                <span><i class="fa-solid fa-check-circle mr-1 text-green-500"></i> Verificado</span>
+                <span><i class="fa-solid fa-lock mr-1 text-blue-500"></i> Site Seguro</span>
             </div>
             <div class="flex gap-4 font-medium">
                 <a href="#footer" class="hover:text-white transition">Atendimento</a>
-                <span class="text-accent font-bold flex items-center gap-1 cursor-default"><i class="fa-solid fa-fire"></i> Achadinhos do dia</span>
+                <span class="text-accent font-bold"><i class="fa-solid fa-fire"></i> Ofertas Relâmpago</span>
             </div>
         </div>
     </div>
@@ -56,10 +55,8 @@
             </a>
 
             <div class="hidden md:flex flex-1 max-w-2xl relative">
-                <input type="text" id="search-input" onkeyup="buscarProdutos()" placeholder="Busque por produtos (Ex: Impressora, Alexa)..." class="w-full h-10 rounded-l-md px-4 text-gray-800 focus:outline-none focus:ring-2 focus:ring-accent border-none placeholder-gray-500 text-sm">
-                <button onclick="buscarProdutos()" class="bg-accent hover:bg-yellow-400 text-brand font-bold h-10 px-6 rounded-r-md transition flex items-center justify-center">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
+                <input type="text" id="search-input" onkeyup="buscarProdutos()" placeholder="Busque por produtos, marcas e muito mais..." class="w-full h-10 rounded-l-md px-4 text-gray-800 focus:outline-none focus:ring-2 focus:ring-accent border-none text-sm">
+                <button onclick="buscarProdutos()" class="bg-accent hover:bg-yellow-400 text-brand font-bold h-10 px-6 rounded-r-md transition"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
 
             <div class="hidden md:flex items-center">
@@ -68,52 +65,56 @@
                 </button>
             </div>
         </div>
-
         <div class="bg-brand-hover border-t border-gray-700">
             <div class="max-w-[1280px] mx-auto px-4 h-10 flex items-center gap-6 text-sm font-medium text-gray-300 overflow-x-auto no-scrollbar">
-                <button onclick="carregarProdutos('todos')" class="flex items-center gap-2 text-white font-bold cursor-pointer hover:bg-gray-700 px-3 py-1 rounded transition whitespace-nowrap"><i class="fa-solid fa-bars"></i> Todos</button>
-                <button onclick="carregarProdutos('tech')" class="hover:text-white hover:underline transition whitespace-nowrap">Eletrônicos</button>
-                <button onclick="carregarProdutos('home')" class="hover:text-white hover:underline transition whitespace-nowrap">Casa Inteligente</button>
-                <button onclick="carregarProdutos('gamer')" class="hover:text-white hover:underline transition whitespace-nowrap">Gamer</button>
+                <button onclick="carregarProdutos('todos')" class="hover:text-white font-bold"><i class="fa-solid fa-bars"></i> Todos</button>
+                <button onclick="carregarProdutos('tech')" class="hover:text-white">Eletrônicos</button>
+                <button onclick="carregarProdutos('home')" class="hover:text-white">Casa Inteligente</button>
+                <button onclick="carregarProdutos('gamer')" class="hover:text-white">Gamer</button>
             </div>
         </div>
     </header>
 
     <div class="md:hidden bg-brand p-4 pt-0 pb-4 shadow-md sticky top-20 z-40">
         <div class="flex w-full relative">
-            <input type="text" id="search-input-mobile" onkeyup="buscarProdutosMobile()" placeholder="O que você procura?" class="w-full h-11 rounded-md px-4 text-gray-800 focus:outline-none focus:ring-2 focus:ring-accent text-sm">
+            <input type="text" id="search-input-mobile" onkeyup="buscarProdutosMobile()" placeholder="O que você procura?" class="w-full h-11 rounded-md px-4 text-gray-800 focus:outline-none text-sm">
             <button class="absolute right-0 top-0 h-11 px-4 text-gray-500"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
     </div>
 
-    <div class="w-full bg-white mb-6 relative border-b border-gray-200">
-        <div class="max-w-[1280px] mx-auto">
-            <div class="h-[220px] md:h-[350px] w-full bg-gradient-to-r from-blue-900 to-slate-900 relative overflow-hidden flex items-center rounded-b-lg md:rounded-lg md:mt-4 md:mb-4">
-                <div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
-                <div class="px-6 md:px-16 w-full relative z-10 flex flex-col justify-center h-full">
-                    <span class="bg-accent text-brand-hover font-bold px-3 py-1 rounded-sm text-xs mb-3 shadow-lg tracking-wide uppercase inline-flex items-center gap-2 w-fit">
-                        <i class="fa-solid fa-star"></i> Top Vendas 2026
-                    </span>
-                    <h2 class="text-2xl md:text-5xl font-black text-white mb-3 leading-tight drop-shadow-md">Os produtos que a internet<br>está amando.</h2>
-                    <p class="text-blue-100 mb-6 font-normal text-sm md:text-lg max-w-lg">Seleção exclusiva dos gadgets mais virais com desconto.</p>
-                    <button onclick="document.getElementById('shop-section').scrollIntoView({behavior: 'smooth'})" class="w-fit bg-white text-brand font-bold px-6 py-3 rounded shadow-xl hover:bg-gray-100 transition text-xs md:text-sm uppercase tracking-wider">Ver Ofertas</button>
-                </div>
+    <div class="w-full bg-gray-100 mb-6 relative">
+        <div class="h-[280px] md:h-[400px] w-full bg-gradient-to-r from-[#0033cc] to-[#001a66] relative overflow-hidden flex items-center">
+            <div class="absolute inset-0 opacity-30 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+            
+            <div class="max-w-[1280px] mx-auto px-6 md:px-16 w-full relative z-10 flex flex-col justify-center h-full">
+                <span class="bg-accent text-brand-hover font-bold px-3 py-1 rounded-sm text-xs mb-5 shadow-lg tracking-wide uppercase inline-flex items-center gap-2 w-fit">
+                    <i class="fa-solid fa-clock"></i> Oferta Relâmpago
+                </span>
+                <h2 class="text-3xl md:text-6xl font-black text-white mb-4 leading-tight drop-shadow-lg">
+                    Tecnologia que <br>transforma sua casa.
+                </h2>
+                <p class="text-blue-100 mb-8 font-normal text-lg max-w-lg">
+                    Os gadgets mais desejados do mundo com entrega expressa.
+                </p>
+                <button onclick="document.getElementById('shop-section').scrollIntoView({behavior: 'smooth'})" class="w-fit bg-white text-brand font-bold px-8 py-4 rounded-md shadow-xl hover:bg-gray-100 hover:scale-105 transition transform text-sm uppercase tracking-wider">
+                    Conferir Ofertas
+                </button>
             </div>
         </div>
     </div>
 
-    <div class="max-w-[1280px] mx-auto px-4 mb-10">
-        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-4 md:p-6 grid grid-cols-2 md:grid-cols-4 gap-4 items-center">
-            <div class="flex items-center gap-3"><i class="fa-brands fa-pix text-2xl text-teal-600"></i><div><h4 class="font-bold text-xs md:text-sm text-gray-900">Pagamento Pix</h4><p class="text-[10px] text-gray-500">Aprovação imediata</p></div></div>
-            <div class="flex items-center gap-3"><i class="fa-regular fa-credit-card text-2xl text-blue-600"></i><div><h4 class="font-bold text-xs md:text-sm text-gray-900">Cartão de Crédito</h4><p class="text-[10px] text-gray-500">Parcele suas compras</p></div></div>
-            <div class="flex items-center gap-3"><i class="fa-solid fa-truck-fast text-2xl text-orange-600"></i><div><h4 class="font-bold text-xs md:text-sm text-gray-900">Envio Garantido</h4><p class="text-[10px] text-gray-500">Rastreio Oficial</p></div></div>
-            <div class="flex items-center gap-3"><i class="fa-solid fa-shield-halved text-2xl text-gray-600"></i><div><h4 class="font-bold text-xs md:text-sm text-gray-900">Compra Segura</h4><p class="text-[10px] text-gray-500">Garantia de entrega</p></div></div>
+    <div class="max-w-[1280px] mx-auto px-4 -mt-10 relative z-20 mb-12">
+        <div class="bg-white rounded-lg shadow-lg border border-gray-100 p-6 grid grid-cols-2 md:grid-cols-4 gap-6 items-center">
+            <div class="flex items-center gap-4"><i class="fa-regular fa-credit-card text-3xl text-gray-700"></i><div><h4 class="font-bold text-sm text-gray-900">Parcele no Cartão</h4><p class="text-xs text-gray-500">Compra segura</p></div></div>
+            <div class="flex items-center gap-4"><i class="fa-solid fa-truck-fast text-3xl text-gray-700"></i><div><h4 class="font-bold text-sm text-gray-900">Entrega Rápida</h4><p class="text-xs text-gray-500">Todo o Brasil</p></div></div>
+            <div class="flex items-center gap-4"><i class="fa-solid fa-shield-halved text-3xl text-gray-600"></i><div><h4 class="font-bold text-sm text-gray-900">Garantia Total</h4><p class="text-xs text-gray-500">7 dias para troca</p></div></div>
+            <div class="flex items-center gap-4"><i class="fa-brands fa-pix text-3xl text-teal-600"></i><div><h4 class="font-bold text-sm text-gray-900">Desconto no Pix</h4><p class="text-xs text-gray-500">Aprovação imediata</p></div></div>
         </div>
     </div>
 
     <div id="shop-section" class="max-w-[1280px] mx-auto px-4 pb-20">
-        <div class="flex items-center justify-between mb-6 border-b border-gray-200 pb-4">
-            <h2 class="text-xl md:text-3xl font-bold text-gray-900 flex items-center gap-2"><i class="fa-solid fa-bolt text-accent"></i> Destaques</h2>
+        <div class="flex items-center justify-between mb-8 border-b border-gray-200 pb-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 flex items-center gap-2"><i class="fa-solid fa-bolt text-accent"></i> Destaques</h2>
             
             <div class="flex items-center gap-2 bg-gray-100 text-gray-600 px-3 py-1 rounded-full border border-gray-200 text-xs font-medium">
                 <i class="fa-regular fa-eye"></i>
@@ -121,37 +122,49 @@
             </div>
         </div>
 
-        <div id="product-grid" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-6">
-            <div class="col-span-full py-20 text-center text-gray-400">
-                <i class="fa-solid fa-circle-notch fa-spin text-2xl"></i> Carregando catálogo...
-            </div>
+        <div id="product-grid" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6">
+            <div class="col-span-full py-20 text-center text-gray-400"><i class="fa-solid fa-circle-notch fa-spin text-2xl"></i> Carregando catálogo...</div>
         </div>
     </div>
 
-    <footer id="footer" class="bg-brand text-white pt-12 pb-8 border-t-4 border-accent">
+    <footer class="bg-brand text-white pt-16 pb-8 border-t-4 border-accent">
         <div class="max-w-[1280px] mx-auto px-4">
-            <div class="grid md:grid-cols-3 gap-8 mb-8 text-center md:text-left">
-                <div>
+            <div class="grid md:grid-cols-4 gap-8 mb-12 text-center md:text-left">
+                <div class="col-span-1">
                     <div class="flex items-center gap-2 mb-4 justify-center md:justify-start">
-                        <div class="w-8 h-8 bg-accent rounded flex items-center justify-center text-brand font-bold">N</div>
-                        <span class="font-black text-xl">N WAVE</span>
+                        <div class="w-10 h-10 bg-accent rounded flex items-center justify-center text-brand font-bold text-xl">N</div>
+                        <span class="font-black text-2xl">N WAVE</span>
                     </div>
-                    <p class="text-gray-400 text-sm">Somos uma vitrine de curadoria tecnológica. Selecionamos as melhores ofertas para você economizar tempo e dinheiro.</p>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Sua vitrine oficial de tecnologia e inovação. Conectamos você às melhores ofertas das maiores plataformas do mundo.
+                    </p>
                 </div>
                 <div>
-                    <h4 class="font-bold mb-4 text-gray-200">Categorias</h4>
-                    <ul class="text-sm text-gray-400 space-y-2">
+                    <h4 class="font-bold text-lg mb-4 text-white">Navegação</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" onclick="carregarProdutos('todos')" class="hover:text-accent">Início</a></li>
                         <li><a href="#" onclick="carregarProdutos('tech')" class="hover:text-accent">Eletrônicos</a></li>
-                        <li><a href="#" onclick="carregarProdutos('gamer')" class="hover:text-accent">Gamer</a></li>
                         <li><a href="#" onclick="carregarProdutos('home')" class="hover:text-accent">Casa Inteligente</a></li>
                     </ul>
                 </div>
-                <div>
-                    <h4 class="font-bold mb-4 text-gray-200">Transparência</h4>
-                    <p class="text-xs text-gray-400 leading-relaxed">Ao clicar nos links de compra, você será redirecionado para a plataforma oficial (Shopee, Amazon ou ML), onde a transação é processada com total segurança.</p>
+                <div class="col-span-1 md:col-span-2">
+                    <h4 class="font-bold text-lg mb-4 text-white">Transparência & Segurança</h4>
+                    <p class="text-sm text-gray-400 mb-4">
+                        Este site opera como um curador de ofertas. Ao clicar nos botões de compra, você será redirecionado para a plataforma oficial do vendedor (Shopee, Amazon, etc), garantindo 100% de segurança na sua transação.
+                    </p>
+                    <div class="flex justify-center md:justify-start gap-4 text-3xl text-gray-400">
+                        <i class="fa-brands fa-cc-visa"></i>
+                        <i class="fa-brands fa-cc-mastercard"></i>
+                        <i class="fa-brands fa-pix"></i>
+                    </div>
                 </div>
             </div>
-            <div class="border-t border-gray-800 pt-8 text-center text-xs text-gray-500">&copy; 2026 N WAVE Store. Todos os direitos reservados.</div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+                <p>&copy; 2026 N WAVE Store. Todos os direitos reservados.</p>
+                <div class="mt-2 md:mt-0 flex gap-4">
+                    <span>Brasil <img src="https://flagcdn.com/w20/br.png" class="inline w-4 ml-1"></span>
+                </div>
+            </div>
         </div>
     </footer>
 
@@ -182,19 +195,13 @@
         function renderizar(lista) {
             const grid = document.getElementById('product-grid');
             grid.innerHTML = '';
+            
             if (lista.length === 0) {
                 grid.innerHTML = '<div class="col-span-full text-center py-20 text-gray-500">Nenhum produto encontrado.</div>';
                 return;
             }
 
             lista.forEach(p => {
-                let badge = '';
-                const sales = p.sales || "";
-                if (sales.toLowerCase().includes('vendidos') || sales.toLowerCase().includes('top')) {
-                    badge = '<div class="absolute top-0 left-0 bg-accent text-brand font-bold text-[10px] px-2 py-1 z-10 shadow-sm uppercase tracking-wider">Mais Vendido</div>';
-                }
-
-                // LÓGICA DO BOTÃO MULTI-LOJA
                 const loja = (p.store || 'shopee').toLowerCase();
                 let btnClass = "bg-orange-500 hover:bg-orange-600 text-white";
                 let btnText = "Ver na Shopee";
@@ -212,7 +219,8 @@
 
                 const card = `
                 <div class="bg-white border border-gray-200 rounded-lg p-3 md:p-4 hover:shadow-xl hover:-translate-y-1 transition duration-300 group cursor-pointer flex flex-col justify-between h-full relative overflow-hidden">
-                    ${badge}
+                    ${(p.sales && (p.sales.includes('vendidos') || p.sales.includes('+'))) ? '<div class="absolute top-0 left-0 bg-accent text-brand font-bold text-[10px] px-2 py-1 z-10 shadow-sm uppercase tracking-wider">Mais Vendido</div>' : ''}
+                    
                     <a href="${p.link}" target="_blank" class="block h-full flex flex-col justify-between">
                         <div class="h-40 md:h-48 flex items-center justify-center mb-4 relative bg-white">
                             <img src="${p.image}" class="max-h-full max-w-full object-contain mix-blend-multiply group-hover:scale-105 transition duration-500" alt="${p.name}">
@@ -234,15 +242,15 @@
             });
         }
 
-        // CONTADOR DE VISITAS ÚNICAS (VIA REDIS)
+        // CONTADOR DE VISITAS REAIS (SEM FAKE)
         async function carregarVisitas() {
             const el = document.getElementById('total-visits');
             const jaVisitou = localStorage.getItem('visited_v1');
             let url = '/api/visits';
             
             if (!jaVisitou) {
-                url += '?new=true'; // Avisa API para somar +1
-                localStorage.setItem('visited_v1', 'true'); // Marca pulseirinha
+                url += '?new=true';
+                localStorage.setItem('visited_v1', 'true');
             }
 
             try {
@@ -250,7 +258,7 @@
                 const data = await res.json();
                 el.innerText = parseInt(data.visits).toLocaleString('pt-BR');
             } catch(e) {
-                el.innerText = "+1.400";
+                el.innerText = "-"; 
             }
         }
 

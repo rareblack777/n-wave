@@ -2,7 +2,7 @@
 
 const links = {
     "01": "https://s.shopee.com.br/6VHnOzyGx4?share_channel_code=1",
-    "02": "https://s.shopee.com.br/7AXUCUbbDc?share_channel_code=1",
+    "02": "https://s.shopee.com.br/14JrDzggh?share_channel_code=1",
     "03": "https://s.shopee.com.br/7AXUCZDeMn?share_channel_code=1",
     "04": "https://s.shopee.com.br/1Vt7SbAiFf?share_channel_code=1",
     "05": "https://s.shopee.com.br/8APZCWqEqR?share_channel_code=1",

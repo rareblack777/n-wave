@@ -40,7 +40,7 @@ const products = [
         name: "MINI MOP Esfregão Portátil Dobrável Rodo Para Limpeza Branco",
         price: '<span class="text-[10px] text-gray-500 line-through mr-1">R$ 27,91</span> R$ 18,99 <span class="text-[10px] text-green-400 ml-1">-32%</span>',
         category: "home",
-        image: "https://down-br.img.susercontent.com/file/br-11134207-7r98q-ll58giysdbme7c@resize_w450_nl.webp",
+        image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-lt5fs1fxc2syd7@resize_w450_nl.webp",
         link: "/api/v1/redirect?id=02",
         sales: "14 Vendidos",
         rating: "4.8",
