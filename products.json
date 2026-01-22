@@ -80,7 +80,7 @@
     },
     {
         "id": "08",
-        "name": "Watch X Smartwatch Relogio Serie 10 c/chat GPT",
+        "name": "Watch X Smartwatch Relogio Serie 10 c/ chat GPT",
         "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 292,49</span> <br> R$ 194,89 - R$ 224,89 </span>",
         "category": "home",
         "image": "https://down-br.img.susercontent.com/file/br-11134207-81ztc-mjpxbwvx3q4hcf@resize_w450_nl.webp",
@@ -146,7 +146,7 @@
     },
     {
         "id": "14",
-        "name": "Dispenser organizador c/Suporte para acessórios ",
+        "name": "Dispenser organizador c/ Suporte para acessórios ",
         "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 231,02 - R$ 411,54</span> <br> R$ 106,27 - R$ 189,31 </span>",
         "category": "home",
         "image": "https://down-br.img.susercontent.com/file/bbf751885ec283b073744b93c8bc80ee@resize_w450_nl.webp",
@@ -168,58 +168,58 @@
     },
     {
         "id": "16",
-        "name": "Copo Térmico com Medidor Digital",
-        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 70,00</span> R$ 35,00 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
+        "name": "Mini Máquina Seladora Portátil 2 Em 1 c/ carregamento Usb ",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 39,99</span> R$ 21,90 </span>",
         "category": "home",
-        "image": "https://cdn-icons-png.flaticon.com/512/3081/3081840.png",
+        "image": "https://down-br.img.susercontent.com/file/br-11134207-7r98o-m8hn0g4ohdrl49@resize_w450_nl.webp",
         "link": "/api/v1/redirect?id=16",
-        "sales": "Novidade",
-        "rating": "4.8",
-        "reviews": "100 reviews"
+        "sales": "+30mil vendidos",
+        "rating": "4.6",
+        "reviews": "16,1mil reviews"
     },
     {
         "id": "17",
-        "name": "Afiador de Facas 3 Estágios",
-        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 50,00</span> R$ 25,00 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
+        "name": "Escova De Limpeza 5 Em 1, Elétrica Sem Fio ",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 89,90</span> R$ 33,27 </span>",
         "category": "home",
-        "image": "https://cdn-icons-png.flaticon.com/512/3081/3081840.png",
+        "image": "https://down-br.img.susercontent.com/file/br-11134207-7r98o-m527v5unmuth56@resize_w450_nl.webp",
         "link": "/api/v1/redirect?id=17",
-        "sales": "+5mil vendidos",
-        "rating": "4.8",
-        "reviews": "100 reviews"
+        "sales": "+70mil vendidos",
+        "rating": "4.7",
+        "reviews": "36,7mil reviews"
     },
     {
         "id": "18",
-        "name": "Máquina de Fazer Dumpling/Pastel",
-        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 80,00</span> R$ 39,90 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
+        "name": "Tapete Super Absorvente, Multiuso, Secagem Rápida",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 30,00</span> R$ 11,99 </span>",
         "category": "home",
-        "image": "https://cdn-icons-png.flaticon.com/512/3081/3081840.png",
+        "image": "https://down-br.img.susercontent.com/file/sg-11134201-825b2-mgf7iod0j7d6e5@resize_w450_nl.webp",
         "link": "/api/v1/redirect?id=18",
-        "sales": "Viral Cozinha",
+        "sales": "+5mil vendidos",
         "rating": "4.8",
-        "reviews": "100 reviews"
+        "reviews": "2,6mil reviews"
     },
     {
         "id": "19",
         "name": "Forma de Gelo One Press",
-        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 99,00</span> R$ 49,90 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 99,00</span> R$ 39,99 </span>",
         "category": "home",
-        "image": "https://cdn-icons-png.flaticon.com/512/3081/3081840.png",
+        "image": "https://down-br.img.susercontent.com/file/sg-11134201-7ren6-m2cp37ky9asqc5@resize_w450_nl.webp",
         "link": "/api/v1/redirect?id=19",
-        "sales": "Praticidade",
-        "rating": "4.8",
-        "reviews": "100 reviews"
+        "sales": "+381 vendidos",
+        "rating": "4.5",
+        "reviews": "130 reviews"
     },
     {
         "id": "20",
-        "name": "Mini Balança Digital de Precisão",
-        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 40,00</span> R$ 19,90 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
+        "name": "Luminária Inteligente c/ sensor de movimento, Recarregável ",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 32,00 - R$ 128,00</span> <br> R$ 13,90 - R$ 37,90 </span>",
         "category": "home",
-        "image": "https://cdn-icons-png.flaticon.com/512/3081/3081840.png",
+        "image": "https://down-br.img.susercontent.com/file/sg-11134201-7repf-m22lehps5d6fda@resize_w450_nl.webp",
         "link": "/api/v1/redirect?id=20",
-        "sales": "+10mil vendidos",
+        "sales": "+20mil vendidos",
         "rating": "4.8",
-        "reviews": "100 reviews"
+        "reviews": "13,2mil reviews"
     },
     {
         "id": "21",
