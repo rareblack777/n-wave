@@ -23,20 +23,23 @@ let allProducts = [];
 
 async function init() {
     try {
-        // --- 🧹 FAXINA: REMOVE O NÚMERO FAKE 1.434 DA MEMÓRIA ---
+        // --- 🧹 FAXINA: OBRIGA O NAVEGADOR A ESQUECER O NÚMERO FAKE ---
+        // Isso vai deletar o "1.434" da memória do seu Chrome/Edge agora.
         localStorage.removeItem('fake_visits'); 
-        localStorage.removeItem('visited_v1');
+        localStorage.removeItem('site_total_visits'); // Garantia extra
         // ---------------------------------------------------------
 
+        // 1. Carrega Produtos
         const response = await fetch('products.json'); 
         if (!response.ok) throw new Error("Erro ao carregar JSON");
         
         allProducts = await response.json();
         renderProducts(allProducts);
         
-        // Chama a contagem REAL
+        // 2. Chama a contagem REAL (e limpa o texto antes)
         carregarVisitasReais();
 
+        // 3. Configura busca
         setupSearch('search-input');
         setupSearch('search-input-mobile');
 
@@ -49,35 +52,46 @@ async function init() {
 // 📊 3. SISTEMA DE VISITAS (100% REAL)
 // ==========================================
 async function carregarVisitasReais() {
-    // O ID no seu HTML é 'total-visits', tem que ser igual aqui
     const el = document.getElementById('total-visits');
     if (!el) return;
 
-    // Reseta para traço enquanto carrega (some com o 1.434 imediatamente)
-    el.innerText = "--";
+    // PASSO 1: Reseta visualmente para garantir que o 1.434 suma
+    el.innerText = "--"; 
 
-    // Chama sua API real
+    // Lógica para contar visita nova apenas 1 vez por sessão
+    const jaVisitou = sessionStorage.getItem('sessao_contabilizada');
+    let url = '/api/v1/visits';
+    
+    if (!jaVisitou) {
+        url += '?new=true';
+    }
+
     try {
-        // Adiciona timestamp para evitar cache do navegador
-        const url = `/api/v1/visits?t=${new Date().getTime()}`;
-        const res = await fetch(url);
+        // Adiciona timestamp para o navegador não usar cache antigo
+        const res = await fetch(`${url}&t=${Date.now()}`);
         
-        if (!res.ok) throw new Error('API Offline');
+        if (!res.ok) throw new Error('API Offline ou sem Redis configurado');
         
         const data = await res.json();
         
-        // MOSTRA SOMENTE O DADO REAL DO SERVIDOR
-        // Se o servidor disser 5, mostra 5.
+        if (!jaVisitou) {
+            sessionStorage.setItem('sessao_contabilizada', 'true');
+        }
+
+        // PASSO 2: Mostra O QUE O SERVIDOR MANDAR.
+        // Se o servidor (Redis) disser 0, mostra 0.
+        // Se o servidor disser 1421, mostra 1421.
         el.innerText = parseInt(data.visits || 0).toLocaleString('pt-BR');
 
     } catch(e) {
-        console.warn("Contador indisponível, mantendo limpo:", e);
-        el.innerText = "--"; // Se der erro, mostra traço, não mente.
+        console.warn("API de visitas falhou (provavelmente sem Redis):", e);
+        // Se der erro, mostra traço. É melhor que mentir.
+        el.innerText = "--"; 
     }
 }
 
 // ==========================================
-// 📦 4. RENDERIZAÇÃO E BUSCA
+// 📦 4. RENDERIZAÇÃO
 // ==========================================
 function renderProducts(items) {
     const grid = document.getElementById('product-grid');
