@@ -24,8 +24,7 @@ let allProducts = [];
 // Função Principal de Inicialização
 async function init() {
     try {
-        // 1. Carrega os produtos do arquivo na raiz
-        // Como o script roda no index.html, o caminho é relativo à raiz
+        // 1. Carrega os produtos
         const response = await fetch('products.json'); 
         if (!response.ok) throw new Error("Erro ao carregar JSON");
         
@@ -34,7 +33,8 @@ async function init() {
         // 2. Renderiza na tela
         renderProducts(allProducts);
         
-        // 3. Carrega o contador REAL da sua API (visits.js)
+        // 3. ATENÇÃO: Carrega APENAS visitas reais.
+        // Se a API falhar, não mostra número falso.
         carregarVisitasReais();
 
         // 4. Ativa a busca
@@ -43,8 +43,6 @@ async function init() {
 
     } catch (error) {
         console.error("Erro crítico:", error);
-        const grid = document.getElementById('product-grid');
-        if(grid) grid.innerHTML = '<div class="col-span-full text-center text-red-500 py-10">Erro ao carregar produtos. Verifique o arquivo products.json</div>';
     }
 }
 
@@ -61,7 +59,6 @@ function renderProducts(items) {
     }
 
     items.forEach(p => {
-        // Define cores e ícones baseados na loja
         const store = (p.store || 'shopee').toLowerCase();
         let btnClass = "bg-orange-500 hover:bg-orange-600 text-white";
         let btnText = "Ver na Shopee";
@@ -77,16 +74,12 @@ function renderProducts(items) {
             btnIcon = '<i class="fa-solid fa-handshake"></i>';
         }
 
-        // Estrelas
         const rating = parseFloat(p.rating) || 4.5;
         let starsHtml = '';
         for (let i = 1; i <= 5; i++) {
-            starsHtml += (i <= rating) 
-                ? '<i class="fa-solid fa-star text-yellow-400 text-[10px]"></i>' 
-                : '<i class="fa-regular fa-star text-gray-300 text-[10px]"></i>';
+            starsHtml += (i <= rating) ? '<i class="fa-solid fa-star text-yellow-400 text-[10px]"></i>' : '<i class="fa-regular fa-star text-gray-300 text-[10px]"></i>';
         }
 
-        // Badge de Vendas
         const badge = (p.sales && (p.sales.toLowerCase().includes('vendidos') || p.sales.includes('+'))) 
             ? '<div class="absolute top-0 left-0 bg-accent text-brand font-bold text-[10px] px-2 py-1 z-10 shadow-sm uppercase tracking-wider">Mais Vendido</div>' 
             : '';
@@ -115,53 +108,63 @@ function renderProducts(items) {
     });
 }
 
-// Busca
 function setupSearch(inputId) {
     const input = document.getElementById(inputId);
     if (!input) return;
-
     input.addEventListener('keyup', debounce((e) => {
         const term = e.target.value.toLowerCase();
-        const filtered = allProducts.filter(p => 
-            p.name.toLowerCase().includes(term) || 
-            p.id.includes(term)
-        );
+        const filtered = allProducts.filter(p => p.name.toLowerCase().includes(term) || p.id.includes(term));
         renderProducts(filtered);
     }, 300));
 }
 
-// Filtros (Global)
 window.carregarProdutos = function(category) {
-    if (category === 'todos') {
-        renderProducts(allProducts);
-    } else {
-        const filtered = allProducts.filter(p => p.category === category);
-        renderProducts(filtered);
-    }
+    if (category === 'todos') renderProducts(allProducts);
+    else renderProducts(allProducts.filter(p => p.category === category));
 };
 
-// --- AQUI ESTÁ A CONEXÃO COM SEU ARQUIVO visits.js ---
+// ==========================================
+// 📊 3. SISTEMA DE VISITAS (100% REAL)
+// ==========================================
 async function carregarVisitasReais() {
     const el = document.getElementById('total-visits');
     if (!el) return;
 
-    // Lógica para não contar o mesmo usuário repetidamente (opcional)
-    const jaVisitou = localStorage.getItem('visited_v1');
-    let url = '/api/v1/visits'; // Caminho para sua API Vercel
+    // Coloca um placeholder enquanto carrega
+    el.innerText = "...";
+
+    // Verifica se o usuário já contou nesta sessão (para não inflar números com F5)
+    const jaVisitou = sessionStorage.getItem('sessao_contabilizada');
     
+    // Constrói a URL para a sua API
+    // Se for visita nova, manda ?new=true para o backend somar +1
+    let url = '/api/v1/visits';
     if (!jaVisitou) {
-        url += '?new=true'; // Parâmetro para incrementar
-        localStorage.setItem('visited_v1', 'true');
+        url += '?new=true';
     }
 
     try {
         const res = await fetch(url);
+        
+        // Se a API não responder (erro 404 ou 500), joga erro
+        if (!res.ok) throw new Error('API Offline');
+        
         const data = await res.json();
-        // Exibe o número formatado (ex: 1.200)
+        
+        // Marca que esse usuário já foi contado nesta sessão
+        if (!jaVisitou) {
+            sessionStorage.setItem('sessao_contabilizada', 'true');
+        }
+
+        // Exibe o número REAL que veio do banco de dados
+        // Se vier 0, mostra 0. Nada de 1400 fake.
         el.innerText = parseInt(data.visits || 0).toLocaleString('pt-BR');
+
     } catch(e) {
-        console.warn("Erro ao carregar visitas:", e);
-        el.innerText = "..."; 
+        // Se der erro (ex: backend desligado), mostra apenas um traço.
+        // Melhor mostrar "-" do que mentir para o cliente.
+        console.warn("Contador indisponível:", e);
+        el.innerText = "--"; 
     }
 }
 
