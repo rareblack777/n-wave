@@ -20,14 +20,11 @@ const links = {
     "18": "https://s.shopee.com.br/4fq9dupFEm?share_channel_code=1",
     "19": "https://s.shopee.com.br/1gCY4SqFZz?share_channel_code=1",
     "20": "https://s.shopee.com.br/60LXEpGr6A?share_channel_code=1",
-    "21": "https://s.shopee.com.br/9pXobk2VdR?share_channel_code=1",
-    "22": "https://s.shopee.com.br/5fiFe7dYuQ?share_channel_code=1",
-    "23": "https://s.shopee.com.br/4q98edjvGy?share_channel_code=1",
-    "24": "https://s.shopee.com.br/1BFqIfaA0l?share_channel_code=1",
-    "25": "https://s.shopee.com.br/30hUUsYZgC?share_channel_code=1",
-    "26": "https://s.shopee.com.br/AKU6TjDb3Z?share_channel_code=1",
-    "27": "https://s.shopee.com.br/9KbZIJOV0N?share_channel_code=1",
-    "28": "https://s.shopee.com.br/6VHNuro90k?share_channel_code=1"
+    "21": "https://s.shopee.com.br/50T03D64Q8?share_channel_code=1",
+    "22": "https://s.shopee.com.br/4Att3oS4vD?share_channel_code=1",
+    "23": "https://s.shopee.com.br/14K6tyYZu?share_channel_code=1",
+    "24": "https://s.shopee.com.br/7AXUeXzE2a?share_channel_code=1",
+    "25": "https://s.shopee.com.br/6fbE3yEe2O?share_channel_code=1"
 };
 
 export default function handler(req, res) {
