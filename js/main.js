@@ -19,35 +19,36 @@ function debounce(func, wait) {
 // ==========================================
 // 🚀 2. LÓGICA DO SISTEMA
 // ==========================================
-let allProducts = []; // Armazena os produtos carregados do JSON
+let allProducts = []; 
 
 // Função Principal de Inicialização
 async function init() {
     try {
-        // Carrega os dados do arquivo JSON
-        const response = await fetch('products.json');
+        // 1. Carrega os produtos do arquivo na raiz
+        // Como o script roda no index.html, o caminho é relativo à raiz
+        const response = await fetch('products.json'); 
         if (!response.ok) throw new Error("Erro ao carregar JSON");
         
         allProducts = await response.json();
         
-        // Renderiza todos os produtos inicialmente
+        // 2. Renderiza na tela
         renderProducts(allProducts);
         
-        // Inicia o contador de visitas
-        initFakeSystem();
+        // 3. Carrega o contador REAL da sua API (visits.js)
+        carregarVisitasReais();
 
-        // Configura a Busca (Desktop e Mobile)
+        // 4. Ativa a busca
         setupSearch('search-input');
         setupSearch('search-input-mobile');
 
     } catch (error) {
         console.error("Erro crítico:", error);
         const grid = document.getElementById('product-grid');
-        if(grid) grid.innerHTML = '<div class="col-span-full text-center text-red-500 py-10">Erro ao carregar produtos. Tente recarregar a página.</div>';
+        if(grid) grid.innerHTML = '<div class="col-span-full text-center text-red-500 py-10">Erro ao carregar produtos. Verifique o arquivo products.json</div>';
     }
 }
 
-// Função de Renderização (Cria o HTML)
+// Renderização dos Cards
 function renderProducts(items) {
     const grid = document.getElementById('product-grid');
     if (!grid) return;
@@ -60,7 +61,7 @@ function renderProducts(items) {
     }
 
     items.forEach(p => {
-        // Lógica dos Botões (Shopee, Amazon, etc)
+        // Define cores e ícones baseados na loja
         const store = (p.store || 'shopee').toLowerCase();
         let btnClass = "bg-orange-500 hover:bg-orange-600 text-white";
         let btnText = "Ver na Shopee";
@@ -76,7 +77,7 @@ function renderProducts(items) {
             btnIcon = '<i class="fa-solid fa-handshake"></i>';
         }
 
-        // Lógica das Estrelas
+        // Estrelas
         const rating = parseFloat(p.rating) || 4.5;
         let starsHtml = '';
         for (let i = 1; i <= 5; i++) {
@@ -85,16 +86,14 @@ function renderProducts(items) {
                 : '<i class="fa-regular fa-star text-gray-300 text-[10px]"></i>';
         }
 
-        // Tag de Destaque
+        // Badge de Vendas
         const badge = (p.sales && (p.sales.toLowerCase().includes('vendidos') || p.sales.includes('+'))) 
             ? '<div class="absolute top-0 left-0 bg-accent text-brand font-bold text-[10px] px-2 py-1 z-10 shadow-sm uppercase tracking-wider">Mais Vendido</div>' 
             : '';
 
-        // Template do Card
         const card = `
         <div class="bg-white border border-gray-200 rounded-lg p-3 md:p-4 hover:shadow-xl hover:-translate-y-1 transition duration-300 group cursor-pointer flex flex-col justify-between h-full relative overflow-hidden">
             ${badge}
-            
             <a href="${p.link}" target="_blank" class="block h-full flex flex-col justify-between">
                 <div class="h-40 md:h-48 flex items-center justify-center mb-4 relative bg-white">
                     <img src="${p.image}" class="max-h-full max-w-full object-contain mix-blend-multiply group-hover:scale-105 transition duration-500" alt="${escapeHTML(p.name)}" loading="lazy">
@@ -112,12 +111,11 @@ function renderProducts(items) {
                 </div>
             </a>
         </div>`;
-        
         grid.innerHTML += card;
     });
 }
 
-// Configuração da Busca
+// Busca
 function setupSearch(inputId) {
     const input = document.getElementById(inputId);
     if (!input) return;
@@ -132,7 +130,7 @@ function setupSearch(inputId) {
     }, 300));
 }
 
-// Filtro por Categoria (Chamado pelos botões do HTML)
+// Filtros (Global)
 window.carregarProdutos = function(category) {
     if (category === 'todos') {
         renderProducts(allProducts);
@@ -142,24 +140,29 @@ window.carregarProdutos = function(category) {
     }
 };
 
-// Contador de Visitas Falso (Melhor experiência visual)
-function initFakeSystem() {
-    const counter = document.getElementById('total-visits');
-    if (counter) {
-        // Tenta pegar do localStorage ou inicia com 14.502
-        let visits = parseInt(localStorage.getItem('fake_visits')) || 14502;
-        
-        // Atualiza na tela
-        counter.innerText = visits.toLocaleString('pt-BR');
+// --- AQUI ESTÁ A CONEXÃO COM SEU ARQUIVO visits.js ---
+async function carregarVisitasReais() {
+    const el = document.getElementById('total-visits');
+    if (!el) return;
 
-        // Incrementa aleatoriamente a cada 5-10 segundos
-        setInterval(() => {
-            visits += Math.floor(Math.random() * 3) + 1;
-            localStorage.setItem('fake_visits', visits);
-            counter.innerText = visits.toLocaleString('pt-BR');
-        }, 8000);
+    // Lógica para não contar o mesmo usuário repetidamente (opcional)
+    const jaVisitou = localStorage.getItem('visited_v1');
+    let url = '/api/v1/visits'; // Caminho para sua API Vercel
+    
+    if (!jaVisitou) {
+        url += '?new=true'; // Parâmetro para incrementar
+        localStorage.setItem('visited_v1', 'true');
+    }
+
+    try {
+        const res = await fetch(url);
+        const data = await res.json();
+        // Exibe o número formatado (ex: 1.200)
+        el.innerText = parseInt(data.visits || 0).toLocaleString('pt-BR');
+    } catch(e) {
+        console.warn("Erro ao carregar visitas:", e);
+        el.innerText = "..."; 
     }
 }
 
-// Inicia tudo quando a página carregar
 document.addEventListener("DOMContentLoaded", init);

@@ -19,20 +19,20 @@
         "store": "shopee",
         "image": "https://down-br.img.susercontent.com/file/br-11134207-7r98o-lt5fs1fxc2syd7@resize_w450_nl.webp",
         "link": "/api/v1/redirect?id=02",
-        "sales": "+10mil vendidos",
-        "rating": "4.8",
-        "reviews": "100 reviews"
+        "sales": "+5mil vendidos",
+        "rating": "4.7",
+        "reviews": "2,7mil reviews"
     },
     {
         "id": "03",
-        "name": "Escova de Limpeza Elétrica 5 em 1",
-        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 89,90</span> R$ 39,90 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
+        "name": "Luminária G-Speaker RGB",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 89,90</span> R$ 39,90",
         "category": "home",
-        "image": "https://cdn-icons-png.flaticon.com/512/3081/3081840.png",
+        "image": "https://down-br.img.susercontent.com/file/br-11134207-7r98o-lrx0zrrfqh3h81@resize_w450_nl.webp",
         "link": "/api/v1/redirect?id=03",
-        "sales": "Viral TikTok",
+        "sales": "+10mil vendidos",
         "rating": "4.8",
-        "reviews": "100 reviews"
+        "reviews": "7,1mil reviews"
     },
     {
         "id": "04",
@@ -300,8 +300,8 @@
     },
     {
         "id": "28",
-        "name": "Luminária G-Speaker RGB",
-        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 120,00</span> R$ 55,00 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
+        "name": "Escova de Limpeza Elétrica 5 em 1",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ R$56,88 - R$68,88</span> R$52,33 - R$58,88 <span class=\"text-[10px] text-green-400 ml-1\">OFERTA</span>",
         "category": "tech",
         "image": "https://cdn-icons-png.flaticon.com/512/3067/3067260.png",
         "link": "/api/v1/redirect?id=28",
