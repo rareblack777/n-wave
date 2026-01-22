@@ -21,23 +21,22 @@ function debounce(func, wait) {
 // ==========================================
 let allProducts = []; 
 
-// Função Principal de Inicialização
 async function init() {
     try {
-        // 1. Carrega os produtos
+        // --- 🧹 FAXINA: REMOVE O NÚMERO FAKE 1.434 DA MEMÓRIA ---
+        localStorage.removeItem('fake_visits'); 
+        localStorage.removeItem('visited_v1');
+        // ---------------------------------------------------------
+
         const response = await fetch('products.json'); 
         if (!response.ok) throw new Error("Erro ao carregar JSON");
         
         allProducts = await response.json();
-        
-        // 2. Renderiza na tela
         renderProducts(allProducts);
         
-        // 3. ATENÇÃO: Carrega APENAS visitas reais.
-        // Se a API falhar, não mostra número falso.
+        // Chama a contagem REAL
         carregarVisitasReais();
 
-        // 4. Ativa a busca
         setupSearch('search-input');
         setupSearch('search-input-mobile');
 
@@ -46,11 +45,43 @@ async function init() {
     }
 }
 
-// Renderização dos Cards
+// ==========================================
+// 📊 3. SISTEMA DE VISITAS (100% REAL)
+// ==========================================
+async function carregarVisitasReais() {
+    // O ID no seu HTML é 'total-visits', tem que ser igual aqui
+    const el = document.getElementById('total-visits');
+    if (!el) return;
+
+    // Reseta para traço enquanto carrega (some com o 1.434 imediatamente)
+    el.innerText = "--";
+
+    // Chama sua API real
+    try {
+        // Adiciona timestamp para evitar cache do navegador
+        const url = `/api/v1/visits?t=${new Date().getTime()}`;
+        const res = await fetch(url);
+        
+        if (!res.ok) throw new Error('API Offline');
+        
+        const data = await res.json();
+        
+        // MOSTRA SOMENTE O DADO REAL DO SERVIDOR
+        // Se o servidor disser 5, mostra 5.
+        el.innerText = parseInt(data.visits || 0).toLocaleString('pt-BR');
+
+    } catch(e) {
+        console.warn("Contador indisponível, mantendo limpo:", e);
+        el.innerText = "--"; // Se der erro, mostra traço, não mente.
+    }
+}
+
+// ==========================================
+// 📦 4. RENDERIZAÇÃO E BUSCA
+// ==========================================
 function renderProducts(items) {
     const grid = document.getElementById('product-grid');
     if (!grid) return;
-
     grid.innerHTML = ''; 
 
     if (items.length === 0) {
@@ -60,31 +91,18 @@ function renderProducts(items) {
 
     items.forEach(p => {
         const store = (p.store || 'shopee').toLowerCase();
-        let btnClass = "bg-orange-500 hover:bg-orange-600 text-white";
-        let btnText = "Ver na Shopee";
-        let btnIcon = '<i class="fa-solid fa-cart-shopping"></i>';
+        let btnInfo = { class: "bg-orange-500 hover:bg-orange-600 text-white", text: "Ver na Shopee", icon: '<i class="fa-solid fa-cart-shopping"></i>' };
 
-        if(store === 'amazon') {
-            btnClass = "bg-slate-900 hover:bg-black text-white";
-            btnText = "Ver na Amazon";
-            btnIcon = '<i class="fa-brands fa-amazon"></i>';
-        } else if (store === 'mercadolivre') {
-            btnClass = "bg-yellow-400 hover:bg-yellow-500 text-blue-900";
-            btnText = "Ver no Mercado Livre";
-            btnIcon = '<i class="fa-solid fa-handshake"></i>';
-        }
+        if(store === 'amazon') btnInfo = { class: "bg-slate-900 hover:bg-black text-white", text: "Ver na Amazon", icon: '<i class="fa-brands fa-amazon"></i>' };
+        else if (store === 'mercadolivre') btnInfo = { class: "bg-yellow-400 hover:bg-yellow-500 text-blue-900", text: "Ver no Mercado Livre", icon: '<i class="fa-solid fa-handshake"></i>' };
 
         const rating = parseFloat(p.rating) || 4.5;
         let starsHtml = '';
-        for (let i = 1; i <= 5; i++) {
-            starsHtml += (i <= rating) ? '<i class="fa-solid fa-star text-yellow-400 text-[10px]"></i>' : '<i class="fa-regular fa-star text-gray-300 text-[10px]"></i>';
-        }
+        for (let i = 1; i <= 5; i++) starsHtml += (i <= rating) ? '<i class="fa-solid fa-star text-yellow-400 text-[10px]"></i>' : '<i class="fa-regular fa-star text-gray-300 text-[10px]"></i>';
 
-        const badge = (p.sales && (p.sales.toLowerCase().includes('vendidos') || p.sales.includes('+'))) 
-            ? '<div class="absolute top-0 left-0 bg-accent text-brand font-bold text-[10px] px-2 py-1 z-10 shadow-sm uppercase tracking-wider">Mais Vendido</div>' 
-            : '';
+        const badge = (p.sales && (p.sales.includes('vendidos') || p.sales.includes('+'))) ? '<div class="absolute top-0 left-0 bg-accent text-brand font-bold text-[10px] px-2 py-1 z-10 shadow-sm uppercase tracking-wider">Mais Vendido</div>' : '';
 
-        const card = `
+        grid.innerHTML += `
         <div class="bg-white border border-gray-200 rounded-lg p-3 md:p-4 hover:shadow-xl hover:-translate-y-1 transition duration-300 group cursor-pointer flex flex-col justify-between h-full relative overflow-hidden">
             ${badge}
             <a href="${p.link}" target="_blank" class="block h-full flex flex-col justify-between">
@@ -98,13 +116,12 @@ function renderProducts(items) {
                         <span class="text-[10px] text-gray-400 hidden md:inline">(${p.reviews ? p.reviews.replace('reviews', '') : '10'})</span>
                     </div>
                     <div class="mb-3 price-container text-sm md:text-base">${p.price}</div>
-                    <button class="w-full ${btnClass} font-bold py-2 rounded text-xs md:text-sm transition shadow-sm mt-auto flex items-center justify-center gap-2">
-                        ${btnText} ${btnIcon}
+                    <button class="w-full ${btnInfo.class} font-bold py-2 rounded text-xs md:text-sm transition shadow-sm mt-auto flex items-center justify-center gap-2">
+                        ${btnInfo.text} ${btnInfo.icon}
                     </button>
                 </div>
             </a>
         </div>`;
-        grid.innerHTML += card;
     });
 }
 
@@ -119,53 +136,7 @@ function setupSearch(inputId) {
 }
 
 window.carregarProdutos = function(category) {
-    if (category === 'todos') renderProducts(allProducts);
-    else renderProducts(allProducts.filter(p => p.category === category));
+    category === 'todos' ? renderProducts(allProducts) : renderProducts(allProducts.filter(p => p.category === category));
 };
-
-// ==========================================
-// 📊 3. SISTEMA DE VISITAS (100% REAL)
-// ==========================================
-async function carregarVisitasReais() {
-    const el = document.getElementById('total-visits');
-    if (!el) return;
-
-    // Coloca um placeholder enquanto carrega
-    el.innerText = "...";
-
-    // Verifica se o usuário já contou nesta sessão (para não inflar números com F5)
-    const jaVisitou = sessionStorage.getItem('sessao_contabilizada');
-    
-    // Constrói a URL para a sua API
-    // Se for visita nova, manda ?new=true para o backend somar +1
-    let url = '/api/v1/visits';
-    if (!jaVisitou) {
-        url += '?new=true';
-    }
-
-    try {
-        const res = await fetch(url);
-        
-        // Se a API não responder (erro 404 ou 500), joga erro
-        if (!res.ok) throw new Error('API Offline');
-        
-        const data = await res.json();
-        
-        // Marca que esse usuário já foi contado nesta sessão
-        if (!jaVisitou) {
-            sessionStorage.setItem('sessao_contabilizada', 'true');
-        }
-
-        // Exibe o número REAL que veio do banco de dados
-        // Se vier 0, mostra 0. Nada de 1400 fake.
-        el.innerText = parseInt(data.visits || 0).toLocaleString('pt-BR');
-
-    } catch(e) {
-        // Se der erro (ex: backend desligado), mostra apenas um traço.
-        // Melhor mostrar "-" do que mentir para o cliente.
-        console.warn("Contador indisponível:", e);
-        el.innerText = "--"; 
-    }
-}
 
 document.addEventListener("DOMContentLoaded", init);
