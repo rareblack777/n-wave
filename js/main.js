@@ -2,6 +2,7 @@
 // 🛠️ 1. UTILITÁRIOS
 // ==========================================
 function escapeHTML(str) {
+    if (!str) return '';
     const p = document.createElement('p');
     p.textContent = str;
     return p.innerHTML;
@@ -9,433 +10,156 @@ function escapeHTML(str) {
 
 function debounce(func, wait) {
     let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
+    return function(...args) {
         clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
+        timeout = setTimeout(() => func(...args), wait);
     };
 }
 
 // ==========================================
-// 📦 2. DATABASE (CATÁLOGO)
+// 🚀 2. LÓGICA DO SISTEMA
 // ==========================================
-// Mantenha a sua lista aqui como você enviou
-const products = [
-    {
-        id: "01",
-        name: "Mini Impressora Térmica Gatinho...",
-        price: '<span class="text-[10px] text-gray-500 line-through mr-1">R$ 179,00</span> R$ 116,35 <span class="text-[10px] text-green-400 ml-1">-35%</span>',
-        category: "tech",
-        image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-lpmm0jzw37dn69@resize_w450_nl.webp",
-        link: "/api/v1/redirect?id=01",
-        sales: "405 Vendidos",
-        rating: "4.8",
-        reviews: "228 reviews" 
-    },
-    {
-        id: "02",
-        name: "MINI MOP Esfregão Portátil Dobrável Rodo Para Limpeza Branco",
-        price: '<span class="text-[10px] text-gray-500 line-through mr-1">R$ 27,91</span> R$ 18,99 <span class="text-[10px] text-green-400 ml-1">-32%</span>',
-        category: "home",
-        image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-lt5fs1fxc2syd7@resize_w450_nl.webp",
-        link: "/api/v1/redirect?id=02",
-        sales: "14 Vendidos",
-        rating: "4.8",
-        reviews: "9 reviews"
-    },
-    {
-        id: "03",
-        name: "Luminária Rgb Caixa Som G Speaker Carregador Indução Relógio",
-        price: '<span class="text-[10px] text-gray-500 line-through mr-1">R$ 56,88 - R$ 68,88</span> <br>R$ 52,33 - R$ 58,88 <span class="text-[10px] text-green-400 ml-1">-8%</span>',
-        category: "tech",
-        image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-lksfktuqgbjnd7@resize_w450_nl.webp",
-        link: "/api/v1/redirect?id=03",
-        sales: "+10mil Vendidos",
-        rating: "4.8",
-        reviews: "7mil reviews"
-    },
-    {
-        id: "04",
-        name: "Mini Processador de Alimentos, Elétrico Portátil USB (250ml)",
-        price: '<span class="text-[10px] text-gray-500 line-through mr-1">R$ 40,00 - R$ 160,00</span> <br>R$ 19,50 - R$ 69,91 <span class="text-[10px] text-green-400 ml-1">-51%</span>',
-        category: "home",
-        image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-m84m5543nwmpb9@resize_w450_nl.webp",
-        link: "/api/v1/redirect?id=04",
-        sales: "+90mil Vendidos",
-        rating: "4.6",
-        reviews: "55,1mil reviews"
-    },
-    {
-        id: "05",
-        name: "Smart Projetor Portátil HY300 Android 11 (Suporte 4K)",
-        price: '<span class="text-[10px] text-gray-500 line-through mr-1"> R$ 239,90 </span> R$ 215,91 <span class="text-[10px] text-green-400 ml-1">-10%</span>',
-        category: "tech",
-        image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-lxb15ke21th236@resize_w450_nl.webp",
-        link: "/api/v1/redirect?id=05",
-        sales: "+4mil Vendidos",
-        rating: "4.8",
-        reviews: "2,3mil reviews"
-    },
-    {
-        id: "06",
-        name: "Basike Power Bank Ultra Thin 10000mAh Indução Magsafe",
-        price: '<span class="text-[10px] text-gray-500 line-through mr-1">R$ 180,00</span> R$ 110,00<span class="text-[10px] text-green-400 ml-1">-38%</span>',
-        category: "tech",
-        image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-m8btvrd1ue4105@resize_w450_nl.webp",
-        link: "/api/v1/redirect?id=06",
-        sales: "+2mil Vendidos", 
-        rating: "4.9", 
-        reviews: "1,1mil reviews"
-    },
-    {
-        id: "07",
-        name: "fone de ouvido sem fio (ear clip)bluetooth fon-13025",
-        price: '<span class="text-[10px] text-gray-500 line-through mr-1">R$ 180,00</span> R$ 69,00<span class="text-[10px] text-green-400 ml-1">-61%</span>',
-        category: "tech",
-        image: "https://down-br.img.susercontent.com/file/sg-11134201-8224y-mhg53ijwdukl75@resize_w450_nl.webp",
-        link: "/api/v1/redirect?id=07",
-        sales: "210 Vendidos", 
-        rating: "4.9", 
-        reviews: "135 reviews"
-    },
-    {
-        id: "08",
-        name: "Watch X Smartwatch Relogio Serie 10 Amoled Nfc Chat GPT Original",
-        price: '<span class="text-[10px] text-gray-500 line-through mr-1">R$ 292,49</span> <br> R$ 194,89 - R$ 224,89<span class="text-[10px] text-green-400 ml-1">-33%</span>',
-        category: "tech",
-        image: "https://down-br.img.susercontent.com/file/sg-11134201-7rd4v-lvrr7762c98ib1@resize_w450_nl.webp",
-        link: "/api/v1/redirect?id=08",
-        sales: "à venda", 
-        rating: "4.8", 
-        reviews: "5,4mil reviews"
-    },
-    {
-        id: "09",
-        name: "Kit Escova De Limpeza 5 Em 1 Teclado Hagibis Fone De Ouvido",
-        price: '<span class="text-[10px] text-gray-500 line-through mr-1">R$ 7,99 - R$ 29,99</span> <br> R$ 7,60 - R$ 29,99<span class="text-[10px] text-green-400 ml-1">-5%</span>',
-        category: "tech",
-        image: "https://down-br.img.susercontent.com/file/sg-11134201-7rbk6-ln29kkao4kqf69@resize_w450_nl.webp",
-        link: "/api/v1/redirect?id=09",
-        sales: "612 Vendidos", 
-        rating: "4.8", 
-        reviews: "226 reviews"
-    },
-    {
-        id: "10",
-        name: "Ventilador de Pescoço Portátil Silencioso (USB)",
-        price: '<span class="text-[10px] text-gray-500 line-through mr-1">R$ 38,99 - R$ 39,99</span> R$ 89,00<span class="text-[10px] text-green-400 ml-1">-56%</span>',
-        category: "tech",
-        image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-lyirhwovryqd56@resize_w450_nl.webp",
-        link: "/api/v1/redirect?id=10",
-        sales: "+1mil Vendidos", 
-        rating: "4.6", 
-        reviews: "578 reviews"
-    },
-    {
-        id: "11",
-        name: "Máquina de Cortar Cabelo Barbeiro Dragão Profissional Recarregável",
-        price: '<span class="text-[10px] text-gray-500 line-through mr-1">R$ 80,00</span> R$ 20,99<span class="text-[10px] text-green-400 ml-1">-74%</span>',
-        category: "tech",
-        image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-mcd0uzbv2j1cce@resize_w450_nl.webp",
-        link: "/api/v1/redirect?id=11",
-        sales: "+500mil Vendidos", 
-        rating: "4.7", 
-        reviews: "271,1mil reviews"
-    },
-    {
-        id: "12",
-        name: "Câmera Externa WiFi Dual Lens 6MP 360° (PTZ), À Prova D'água-G1",
-        price: '<span class="text-[10px] text-gray-500 line-through mr-1">R$ 300,00</span> R$ 117,99 <span class="text-[10px] text-green-400 ml-1">-61%</span>',
-        category: "tech",
-        image: "https://down-br.img.susercontent.com/file/br-11134207-81z1k-mglwc89rqd532f@resize_w450_nl.webp",
-        link: "/api/v1/redirect?id=12",
-        sales: "à venda", 
-        rating: "4.7", 
-        reviews: "602 reviews"
-    },
-    {
-        id: "13",
-        name: "Liquidificador Portátil Mini, Original Fresh Juice Elétrico",
-        price: '<span class="text-[10px] text-gray-500 line-through mr-1">R$ 217,83 - R$ 439,98</span> <br> R$ 115,64 - R$ 244,02<span class="text-[10px] text-green-400 ml-1">-61%</span>',
-        category: "home",
-        image: "https://down-br.img.susercontent.com/file/661b2863f64b94ac187ce885b85ab6df@resize_w450_nl.webp",
-        link: "/api/v1/redirect?id=13",
-        sales: "+5mil Vendidos", 
-        rating: "4.7", 
-        reviews: "1,7mil reviews"
-    },
-    {
-        id: "14",
-        name: "Organizador Multifuncional 4 em 1 (Dispenser & Suporte)",
-        price: '<span class="text-[10px] text-gray-500 line-through mr-1">R$ 231,02 - R$ 411,54</span> <br> R$ 106,27 - R$ 189,31 <span class="text-[10px] text-green-400 ml-1">-54%</span>',
-        category: "home",
-        image: "https://down-br.img.susercontent.com/file/bbf751885ec283b073744b93c8bc80ee@resize_w450_nl.webp",
-        link: "/api/v1/redirect?id=14",
-        sales: "+1mil Vendidos",
-        rating: "4.8",
-        reviews: "(555 reviews)"
-    },
-    {
-        id: "15",
-        name: "Umidificador Visual Anti-Gravidade + Relógio LED",
-        price: '<span class="text-[10px] text-gray-500 line-through mr-1">R$ 200,00</span> R$ 75,04 <span class="text-[10px] text-green-400 ml-1">-62%</span>',
-        category: "home",
-        image: "https://down-br.img.susercontent.com/file/sg-11134201-7rd4p-lu6sz2o5gbev37@resize_w450_nl.webp",
-        link: "/api/v1/redirect?id=15",
-        sales: "+1mil Vendidos",
-        rating: "4.7",
-        reviews: "(879 reviews)"
-    },
-    {
-        id: "16",
-        name: "Mini Seladora Portátil USB 2 em 1 (Sela e Corta)",
-        price: '<span class="text-[10px] text-gray-500 line-through mr-1">R$ 39,99</span> R$ 21,90 <span class="text-[10px] text-green-400 ml-1">-45%</span>',
-        category: "home",
-        image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-m8hn0g4ohdrl49@resize_w450_nl.webp",
-        link: "/api/v1/redirect?id=16",
-        sales: "+30mil Vendidos",
-        rating: "4.6",
-        reviews: "(14,9mil reviews)"
-    },
-    {
-        id: "17",
-        name: "Escova De Limpeza Multifuncional Elétrica Sem Fio 5 Em 1",
-        price: '<span class="text-[10px] text-gray-500 line-through mr-1">R$ 89,90</span> R$ 33,27 <span class="text-[10px] text-green-400 ml-1">-63%</span>',
-        category: "home",
-        image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-m527v5unmuth56@resize_w450_nl.webp",
-        link: "/api/v1/redirect?id=17",
-        sales: "+70mil Vendidos",
-        rating: "4.7",
-        reviews: "(36,7mil reviews)"
-    },
-    {
-        id: "18",
-        name: "Kit 2 em 1 Tapete Tecnológico Super Absorvente (Secagem Instantânea)",
-        price: '<span class="text-[10px] text-gray-500 line-through mr-1">R$ 30,00 - R$ 68,88</span> <br> R$ 19,49 - R$ 39,99 <span class="text-[10px] text-green-400 ml-1">-35%</span>',
-        category: "home",
-        image: "https://down-br.img.susercontent.com/file/br-11134207-81z1k-mghzj2nqic5g65@resize_w450_nl.webp",
-        link: "/api/v1/redirect?id=18",
-        sales: "+4mil Vendidos",
-        rating: "4.8",
-        reviews: "(1,6mil reviews)"
-    },
-    {
-        id: "19",
-        name: "Kit Forma de Gelo \"One Press\" com Depósito e Pá",
-        price: '<span class="text-[10px] text-gray-500 line-through mr-1"></span> R$ 99,00 <span class="text-[10px] text-green-400 ml-1"></span>',
-        category: "home",
-        image: "https://down-br.img.susercontent.com/file/sg-11134201-7reou-m2cp36b64aqefd@resize_w450_nl.webp",
-        link: "/api/v1/redirect?id=19",
-        sales: "306 Vendidos",
-        rating: "4.5",
-        reviews: "(112 reviews)"
-    },
-    {
-        id: "20",
-        name: "Barra LED Magnética Inteligente com Sensor de Presença",
-        price: '<span class="text-[10px] text-gray-500 line-through mr-1">R$ 32,00 - R$ 128,00</span> <br> R$ 14,90 - R$ 57,90 <span class="text-[10px] text-green-400 ml-1">-53%</span>',
-        category: "home",
-        image: "https://down-br.img.susercontent.com/file/sg-11134201-7repf-m22lehps5d6fda@resize_w450_nl.webp",
-        link: "/api/v1/redirect?id=20",
-        sales: "+20mil Vendidos",
-        rating: "4.8",
-        reviews: "(12,9mil reviews)"
-    },
-    {
-        id: "21",
-        name: "Teclado Gamer K500-B61 Compacto 60% RGB",
-        price: '<span class="text-[10px] text-gray-500 line-through mr-1">  </span> R$ 199,90 - R$ 299,90 <span class="text-[10px] text-green-400 ml-1"></span>',
-        category: "gamer",
-        image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-lvgyx5b9avtsfa@resize_w450_nl.webp",
-        link: "/api/v1/redirect?id=21",
-        sales: "409 Vendidos",
-        rating: "5.0",
-        reviews: "(195 reviews)"
-    },
-    {
-        id: "22",
-        name: "Mousepad Gamer RGB Extra Grande 80x30cm 7 cores (Speed)",
-        price: '<span class="text-[10px] text-gray-500 line-through mr-1"> R$ 75,50 </span> <br> R$ 41,53 - R$ 75,50 <span class="text-[10px] text-green-400 ml-1">-45%</span>',
-        category: "gamer",
-        image: "https://down-br.img.susercontent.com/file/72b0beb61729fad2c6c2e07f464cf4e0@resize_w450_nl.webp",
-        link: "/api/v1/redirect?id=22",
-        sales: "406 Vendidos",
-        rating: "4.9",
-        reviews: "(229 reviews)"
-    },
-    {
-        id: "23",
-        name: "Kit Neon Smart Tuya RGB 12V",
-        price: '<span class="text-[10px] text-gray-500 line-through mr-1"> R$ 104,70 - R$ 209,80 </span> <br> R$ 73,29 - R$ 146,86 <span class="text-[10px] text-green-400 ml-1">-30%</span>',
-        category: "gamer",
-        image: "https://down-br.img.susercontent.com/file/cn-11134207-7r98o-lyosy8s7dl7m45@resize_w450_nl.webp",
-        link: "/api/v1/redirect?id=23",
-        sales: "42 Vendidos",
-        rating: "4.9",
-        reviews: "(8 reviews)"
-    },
-    {
-        id: "24",
-        name: "Suporte Rgb Para Fone De Ouvido Aikino Msy-9990",
-        price: '<span class="text-[10px] text-gray-500 line-through mr-1">  </span> R$ 51,00 <span class="text-[10px] text-green-400 ml-1"></span>',
-        category: "gamer",
-        image: "https://down-br.img.susercontent.com/file/sg-11134201-8258u-mfvjlgyejw96f3@resize_w450_nl.webp",
-        link: "/api/v1/redirect?id=24",
-        sales: "15 Vendidos",
-        rating: "4.6",
-        reviews: "(9 reviews)"
-    },
-    {
-        id: "25",
-        name: "Speaker Retro Smart Divoom Ditoo-Pro Pixel Art (Teclado Mecânico)",
-        price: '<span class="text-[10px] text-gray-500 line-through mr-1"> R$ 750,00 </span> R$ 639,90 <span class="text-[10px] text-green-400 ml-1">-15%</span>',
-        category: "gamer",
-        image: "https://down-br.img.susercontent.com/file/sg-11134201-7rcdy-m6hv5zruwvihb3@resize_w450_nl.webp",
-        link: "/api/v1/redirect?id=25",
-        sales: "à venda",
-        rating: "5.0",
-        reviews: "(8 reviews)"
-    },
-    {
-        id: "26",
-        name: "Console Portátil Retrô R36S 64GB (+15.000 Jogos)",
-        price: '<span class="text-[10px] text-gray-500 line-through mr-1"> R$ 480,00 </span> <br> R$ 184,99 - R$ 195,99 <span class="text-[10px] text-green-400 ml-1">-61%</span>',
-        category: "gamer",
-        image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-m3azpdpp7bxxe2@resize_w450_nl.webp",
-        link: "/api/v1/redirect?id=26",
-        sales: "+10mil Vendidos",
-        rating: "4.7",
-        reviews: "(5,9mil reviews)"
-    },
-    {
-        id: "27",
-        name: "Microfone Gamer Condensador USB RGB (Stream & Podcast)",
-        price: '<span class="text-[10px] text-gray-500 line-through mr-1"> R$ 253,67 </span> R$ 98,79 <span class="text-[10px] text-green-400 ml-1"></span>',
-        category: "gamer",
-        image: "https://down-br.img.susercontent.com/file/cn-11134207-820l4-mghbkepxd53i33@resize_w450_nl.webp",
-        link: "/api/v1/redirect?id=27",
-        sales: "+1mil Vendidos",
-        rating: "4.9",
-        reviews: "(562 reviews)"
-    },
-    {
-        id: "28",
-        name: "Par de Luvas de Dedo Gamer Pro (Fibra de Prata)",
-        price: '<span class="text-[10px] text-gray-500 line-through mr-1"> R$ 29,99 </span> R$ 19,99 <span class="text-[10px] text-green-400 ml-1">-33%</span>',
-        category: "gamer",
-        image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-m3mgiwba32glbc@resize_w450_nl.webp",
-        link: "/api/v1/redirect?id=28",
-        sales: "514 Vendidos",
-        rating: "4.9",
-        reviews: "(232 reviews)"
-    }
-];
+let allProducts = []; // Armazena os produtos carregados do JSON
 
-// ==========================================
-// 🚀 3. LÓGICA DO SISTEMA
-// ==========================================
-const grid = document.getElementById('product-grid');
-const noResults = document.getElementById('no-results');
-const searchInput = document.getElementById('searchInput');
-const filterBtns = document.querySelectorAll('.filter-btn');
-const loader = document.getElementById('loader');
-
-function renderProducts(items) {
-    if (!grid) return;
-    grid.innerHTML = ''; 
-    
-    if (items.length === 0) {
-        if (noResults) noResults.classList.remove('hidden');
-        return;
-    } 
-    if (noResults) noResults.classList.add('hidden');
-
-    items.forEach(product => {
-        const safeName = escapeHTML(product.name); 
-        const card = document.createElement('a');
-        card.href = product.link;
-        card.target = "_blank";
-        card.className = "product-card group relative bg-nwave-card border border-white/5 rounded-2xl overflow-hidden hover:border-nwave-cyan/50 transition-all duration-300 hover:-translate-y-1 block";
+// Função Principal de Inicialização
+async function init() {
+    try {
+        // Carrega os dados do arquivo JSON
+        const response = await fetch('products.json');
+        if (!response.ok) throw new Error("Erro ao carregar JSON");
         
-        card.innerHTML = `
-            <div class="relative w-full aspect-square bg-gray-900 overflow-hidden">
-                <span class="absolute top-2 left-2 z-10 bg-black/60 backdrop-blur-md text-white border border-white/10 text-[10px] font-bold px-2 py-0.5 rounded-md">#${product.id}</span>
-                <span class="absolute bottom-2 right-2 z-10 bg-nwave-cyan/90 text-black text-[9px] font-bold px-2 py-0.5 rounded-full shadow-[0_0_10px_rgba(0,243,255,0.4)]">🔥 ${product.sales || "+100 Vendidos"}</span>
-                <img src="${product.image}" alt="${safeName}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" onerror="this.src='https://placehold.co/400x400/111/FFF?text=N+WAVE'">
-            </div>
-            <div class="p-3 flex flex-col gap-3">
-                <div>
-                    <h3 class="text-xs text-gray-200 font-medium leading-snug line-clamp-2 h-8 group-hover:text-nwave-cyan transition-colors">${safeName}</h3>
-                    <div class="mt-1 flex items-center gap-1">
-                        <div class="flex text-yellow-400 text-[10px]">★★★★★</div>
-                        <span class="text-[9px] text-gray-500">(${product.rating || "4.8"} • ${product.reviews || "10 reviews"})</span>
-                    </div>
+        allProducts = await response.json();
+        
+        // Renderiza todos os produtos inicialmente
+        renderProducts(allProducts);
+        
+        // Inicia o contador de visitas
+        initFakeSystem();
+
+        // Configura a Busca (Desktop e Mobile)
+        setupSearch('search-input');
+        setupSearch('search-input-mobile');
+
+    } catch (error) {
+        console.error("Erro crítico:", error);
+        const grid = document.getElementById('product-grid');
+        if(grid) grid.innerHTML = '<div class="col-span-full text-center text-red-500 py-10">Erro ao carregar produtos. Tente recarregar a página.</div>';
+    }
+}
+
+// Função de Renderização (Cria o HTML)
+function renderProducts(items) {
+    const grid = document.getElementById('product-grid');
+    if (!grid) return;
+
+    grid.innerHTML = ''; 
+
+    if (items.length === 0) {
+        grid.innerHTML = '<div class="col-span-full text-center py-20 text-gray-500">Nenhum produto encontrado.</div>';
+        return;
+    }
+
+    items.forEach(p => {
+        // Lógica dos Botões (Shopee, Amazon, etc)
+        const store = (p.store || 'shopee').toLowerCase();
+        let btnClass = "bg-orange-500 hover:bg-orange-600 text-white";
+        let btnText = "Ver na Shopee";
+        let btnIcon = '<i class="fa-solid fa-cart-shopping"></i>';
+
+        if(store === 'amazon') {
+            btnClass = "bg-slate-900 hover:bg-black text-white";
+            btnText = "Ver na Amazon";
+            btnIcon = '<i class="fa-brands fa-amazon"></i>';
+        } else if (store === 'mercadolivre') {
+            btnClass = "bg-yellow-400 hover:bg-yellow-500 text-blue-900";
+            btnText = "Ver no Mercado Livre";
+            btnIcon = '<i class="fa-solid fa-handshake"></i>';
+        }
+
+        // Lógica das Estrelas
+        const rating = parseFloat(p.rating) || 4.5;
+        let starsHtml = '';
+        for (let i = 1; i <= 5; i++) {
+            starsHtml += (i <= rating) 
+                ? '<i class="fa-solid fa-star text-yellow-400 text-[10px]"></i>' 
+                : '<i class="fa-regular fa-star text-gray-300 text-[10px]"></i>';
+        }
+
+        // Tag de Destaque
+        const badge = (p.sales && (p.sales.toLowerCase().includes('vendidos') || p.sales.includes('+'))) 
+            ? '<div class="absolute top-0 left-0 bg-accent text-brand font-bold text-[10px] px-2 py-1 z-10 shadow-sm uppercase tracking-wider">Mais Vendido</div>' 
+            : '';
+
+        // Template do Card
+        const card = `
+        <div class="bg-white border border-gray-200 rounded-lg p-3 md:p-4 hover:shadow-xl hover:-translate-y-1 transition duration-300 group cursor-pointer flex flex-col justify-between h-full relative overflow-hidden">
+            ${badge}
+            
+            <a href="${p.link}" target="_blank" class="block h-full flex flex-col justify-between">
+                <div class="h-40 md:h-48 flex items-center justify-center mb-4 relative bg-white">
+                    <img src="${p.image}" class="max-h-full max-w-full object-contain mix-blend-multiply group-hover:scale-105 transition duration-500" alt="${escapeHTML(p.name)}" loading="lazy">
                 </div>
                 <div>
-                    <div class="text-sm font-bold text-white mb-2">${product.price}</div>
-                    <button class="w-full bg-white/5 hover:bg-nwave-cyan hover:text-black border border-white/10 text-gray-300 text-[10px] font-bold uppercase py-2.5 rounded-lg transition-all">
-                        Ver Oferta ➔
+                    <h3 class="text-xs md:text-sm text-gray-700 font-medium leading-tight mb-2 line-clamp-2 group-hover:text-blue-700 group-hover:underline h-8 md:h-10">${escapeHTML(p.name)}</h3>
+                    <div class="flex items-center gap-1 mb-2">
+                        <div class="flex">${starsHtml}</div>
+                        <span class="text-[10px] text-gray-400 hidden md:inline">(${p.reviews ? p.reviews.replace('reviews', '') : '10'})</span>
+                    </div>
+                    <div class="mb-3 price-container text-sm md:text-base">${p.price}</div>
+                    <button class="w-full ${btnClass} font-bold py-2 rounded text-xs md:text-sm transition shadow-sm mt-auto flex items-center justify-center gap-2">
+                        ${btnText} ${btnIcon}
                     </button>
                 </div>
-            </div>
-        `;
-        grid.appendChild(card);
+            </a>
+        </div>`;
+        
+        grid.innerHTML += card;
     });
 }
 
-// INICIALIZAÇÃO SEGURA
-document.addEventListener("DOMContentLoaded", () => {
-    try {
-        renderProducts(products);
-        initFakeSystem();
+// Configuração da Busca
+function setupSearch(inputId) {
+    const input = document.getElementById(inputId);
+    if (!input) return;
 
-        // Configuração de Busca
-        if (searchInput) {
-            searchInput.addEventListener('keyup', debounce((e) => {
-                const query = e.target.value.toLowerCase();
-                const filtered = products.filter(p => 
-                    p.name.toLowerCase().includes(query) || 
-                    p.id.includes(query)
-                );
-                renderProducts(filtered);
-            }, 300));
-        }
+    input.addEventListener('keyup', debounce((e) => {
+        const term = e.target.value.toLowerCase();
+        const filtered = allProducts.filter(p => 
+            p.name.toLowerCase().includes(term) || 
+            p.id.includes(term)
+        );
+        renderProducts(filtered);
+    }, 300));
+}
 
-        // Configuração de Filtros
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const cat = btn.dataset.cat;
-                filterBtns.forEach(b => b.classList.remove('border-nwave-cyan', 'text-nwave-cyan'));
-                btn.classList.add('border-nwave-cyan', 'text-nwave-cyan');
-                const filtered = cat === 'all' ? products : products.filter(p => p.category === cat);
-                renderProducts(filtered);
-            });
-        });
-
-    } catch (e) {
-        console.error("Erro no Sistema:", e);
-    } finally {
-        // GARANTE QUE O LOADER SUMA MESMO COM ERRO
-        setTimeout(() => {
-            if (loader) {
-                loader.style.opacity = '0';
-                setTimeout(() => loader.style.display = 'none', 500);
-            }
-        }, 1000);
+// Filtro por Categoria (Chamado pelos botões do HTML)
+window.carregarProdutos = function(category) {
+    if (category === 'todos') {
+        renderProducts(allProducts);
+    } else {
+        const filtered = allProducts.filter(p => p.category === category);
+        renderProducts(filtered);
     }
-});
+};
 
+// Contador de Visitas Falso (Melhor experiência visual)
 function initFakeSystem() {
-    const counter = document.getElementById('live-counter');
+    const counter = document.getElementById('total-visits');
     if (counter) {
-        let visitors = 142; 
+        // Tenta pegar do localStorage ou inicia com 14.502
+        let visits = parseInt(localStorage.getItem('fake_visits')) || 14502;
+        
+        // Atualiza na tela
+        counter.innerText = visits.toLocaleString('pt-BR');
+
+        // Incrementa aleatoriamente a cada 5-10 segundos
         setInterval(() => {
-            visitors += Math.floor(Math.random() * 5) - 2;
-            if (visitors < 130) visitors = 140;
-            counter.innerText = visitors;
+            visits += Math.floor(Math.random() * 3) + 1;
+            localStorage.setItem('fake_visits', visits);
+            counter.innerText = visits.toLocaleString('pt-BR');
         }, 8000);
     }
 }
+
+// Inicia tudo quando a página carregar
+document.addEventListener("DOMContentLoaded", init);

@@ -1,5 +1,4 @@
 // api/v1/redirect.js
-
 const links = {
     "01": "https://s.shopee.com.br/6VHnOzyGx4?share_channel_code=1",
     "02": "https://s.shopee.com.br/14JrDzggh?share_channel_code=1",
@@ -36,11 +35,7 @@ export default function handler(req, res) {
     const target = links[id];
 
     if (target) {
-        // Redirecionamento 302 (Temporário): O navegador não guarda em cache,
-        // garantindo que cada clique seja processado pela sua API.
         return res.redirect(302, target);
     }
-
-    // Se o ID for inválido, volta para a home do site
     return res.redirect(302, '/');
 }
