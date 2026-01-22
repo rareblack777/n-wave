@@ -23,11 +23,10 @@ let allProducts = [];
 
 async function init() {
     try {
-        // --- 🧹 FAXINA: OBRIGA O NAVEGADOR A ESQUECER O NÚMERO FAKE ---
-        // Isso vai deletar o "1.434" da memória do seu Chrome/Edge agora.
         localStorage.removeItem('fake_visits'); 
         localStorage.removeItem('site_total_visits'); // Garantia extra
-        // ---------------------------------------------------------
+
+        ativarProtecaoSite();
 
         // 1. Carrega Produtos
         const response = await fetch('products.json'); 
@@ -154,3 +153,42 @@ window.carregarProdutos = function(category) {
 };
 
 document.addEventListener("DOMContentLoaded", init);
+
+// ==========================================
+// 🚫 4. PROTEÇÃO CONTRA CÓPIA (ANTI-KIBE)
+// ==========================================
+function ativarProtecaoSite() {
+    // 1. Bloqueia Botão Direito do Mouse
+    document.addEventListener('contextmenu', event => event.preventDefault());
+
+    // 2. Bloqueia Arrastar Imagens (para não salvarem fácil)
+    document.querySelectorAll('img').forEach(img => {
+        img.setAttribute('draggable', 'false');
+        img.addEventListener('dragstart', e => e.preventDefault());
+    });
+
+    // 3. Bloqueia Atalhos de Desenvolvedor (F12, Ctrl+U, etc)
+    document.onkeydown = function(e) {
+        if (e.keyCode == 123) return false; // F12
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false; // Ctrl+Shift+I
+        if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false; // Ctrl+U (Ver Fonte)
+        if (e.ctrlKey && e.keyCode == 'S'.charCodeAt(0)) return false; // Ctrl+S (Salvar)
+        if (e.ctrlKey && e.keyCode == 'C'.charCodeAt(0)) return false; // Ctrl+C (Copiar Texto)
+    };
+
+    // 4. CSS Injetado para bloquear seleção de texto
+    const style = document.createElement('style');
+    style.innerHTML = `
+        body { 
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+/Edge */
+            user-select: none; /* Padrão */
+        }
+        /* Permite digitar na busca, senão o site quebra */
+        input, textarea { user-select: text !important; } 
+    `;
+    document.head.appendChild(style);
+
+    console.log("🛡️ Proteção Ativada.");
+}
