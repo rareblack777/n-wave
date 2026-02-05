@@ -59,7 +59,7 @@
     {
         "id": "06",
         "name": "Basike Power Bank Ultra Thin 10000mAh",
-        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 180,00</span> R$ 110,00 </span>",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 180,00</span> R$ 111,99 </span>",
         "category": "tech",
         "image": "https://down-br.img.susercontent.com/file/br-11134207-7r98o-m2lt2vtqrllfef@resize_w450_nl.webp",
         "link": "/api/v1/redirect?id=06",
