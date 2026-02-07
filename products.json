@@ -70,35 +70,35 @@
     {
         "id": "07",
         "name": "QCY Crossky C50 Clip-On Fones De Ouvido Sem Fio",
-        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 499,00</span> R$ 184,00</span>",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 499,00</span> R$ 189,00</span>",
         "category": "tech",
         "image": "https://down-br.img.susercontent.com/file/cn-11134207-7ras8-mbxl6xusszrqe2@resize_w450_nl.webp",
         "link": "/api/v1/redirect?id=07",
         "sales": "349 vendidos",
         "rating": "5.0",
-        "reviews": "96 reviews"
+        "reviews": "102 reviews"
     },
     {
         "id": "08",
         "name": "Watch X Smartwatch Relogio Serie 10 c/ chat GPT",
-        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 292,49</span> <br> R$ 194,89 - R$ 224,89 </span>",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 189,89</span> <br> R$ 165,21 </span>",
         "category": "tech",
         "image": "https://down-br.img.susercontent.com/file/br-11134207-81ztc-mjpxbwvx3q4hcf@resize_w450_nl.webp",
         "link": "/api/v1/redirect?id=08",
-        "sales": "+10mil vendidos",
+        "sales": "",
         "rating": "4.8",
-        "reviews": "5,7mil reviews"
+        "reviews": "7 reviews"
     },
     {
         "id": "09",
         "name": "Kit Escova De Limpeza 5 Em 1 multifuncional",
-        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 7,99 - R$ 29,99</span> <br> R$ 7,60 - R$ 29,99 </span>",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 7,99 - R$ 29,99</span> <br> R$ 6,90 - R$ 19,99 </span>",
         "category": "game",
         "image": "https://down-br.img.susercontent.com/file/br-11134207-7r98o-lo7e2e551u13e1@resize_w450_nl.webp",
         "link": "/api/v1/redirect?id=09",
         "sales": "554 vendidos",
         "rating": "4.9",
-        "reviews": "272 reviews"
+        "reviews": "228 reviews"
     },
     {
         "id": "10",
@@ -109,29 +109,29 @@
         "link": "/api/v1/redirect?id=10",
         "sales": "+1mil vendidos",
         "rating": "4.6",
-        "reviews": "711 reviews"
+        "reviews": "752 reviews"
     },
     {
         "id": "11",
         "name": "Máquina de Cortar Cabelo, Elétrica Recarregável",
-        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 80,00</span> R$ 20,98 </span>",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 80,00</span> R$ 20,99 </span>",
         "category": "tech",
         "image": "https://down-br.img.susercontent.com/file/sg-11134201-22110-o1j6p4y88bjvc7@resize_w450_nl.webp",
         "link": "/api/v1/redirect?id=11",
         "sales": "+600mil vendidos",
         "rating": "4.7",
-        "reviews": "277,5mil reviews"
+        "reviews": "278,5mil reviews"
     },
     {
         "id": "12",
-        "name": "Câmera de Segurança Wi-Fi Externa 6MP Dual Lens",
-        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 300,00 - R$ 500,00</span> <br> R$ 135,99 - R$ 269,99 </span>",
+        "name": "Aspirador Portátil Baseus A2 Pro Sem Fio 6000Pa",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 575,80</span> <br> R$ 340,90 - R$ 575,80 </span>",
         "category": "tech",
-        "image": "https://down-br.img.susercontent.com/file/br-11134207-81z1k-mg665dhnhp1h75@resize_w450_nl.webp",
+        "image": "https://down-br.img.susercontent.com/file/cn-11134207-7qukw-lhijdfstdjfi44@resize_w450_nl.webp",
         "link": "/api/v1/redirect?id=12",
         "sales": "+1mil vendidos",
         "rating": "4.7",
-        "reviews": "721 reviews"
+        "reviews": "77 reviews"
     },
     {
         "id": "13",
@@ -153,18 +153,18 @@
         "link": "/api/v1/redirect?id=14",
         "sales": "+1mil vendidos",
         "rating": "4.8",
-        "reviews": "556 reviews"
+        "reviews": "560 reviews"
     },
     {
         "id": "15",
         "name": "Umidificador De Ar Difusor Anti Gravidade ",
-        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 200,00</span> R$ 74,90 </span>",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 200,00</span> R$ 79,99 - R$ 89,99</span>",
         "category": "home",
         "image": "https://down-br.img.susercontent.com/file/sg-11134201-7rd4p-lu6sz2o5gbev37@resize_w450_nl.webp",
         "link": "/api/v1/redirect?id=15",
         "sales": "+1mil vendidos",
         "rating": "4.7",
-        "reviews": "911 reviews"
+        "reviews": "922 reviews"
     },
     {
         "id": "16",
@@ -175,7 +175,7 @@
         "link": "/api/v1/redirect?id=16",
         "sales": "+30mil vendidos",
         "rating": "4.6",
-        "reviews": "16,1mil reviews"
+        "reviews": "17mil reviews"
     },
     {
         "id": "17",
@@ -191,13 +191,13 @@
     {
         "id": "18",
         "name": "Tapete Super Absorvente, Multiuso, Secagem Rápida",
-        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 30,00</span> R$ 11,99 </span>",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 30,00</span> R$ 13,98 </span>",
         "category": "home",
         "image": "https://down-br.img.susercontent.com/file/sg-11134201-825b2-mgf7iod0j7d6e5@resize_w450_nl.webp",
         "link": "/api/v1/redirect?id=18",
         "sales": "+5mil vendidos",
         "rating": "4.8",
-        "reviews": "2,6mil reviews"
+        "reviews": "2,8mil reviews"
     },
     {
         "id": "19",
@@ -208,34 +208,34 @@
         "link": "/api/v1/redirect?id=19",
         "sales": "+381 vendidos",
         "rating": "4.5",
-        "reviews": "130 reviews"
+        "reviews": "151 reviews"
     },
     {
         "id": "20",
         "name": "Luminária Inteligente c/ sensor de movimento, Recarregável ",
-        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 32,00 - R$ 128,00</span> <br> R$ 13,90 - R$ 37,90 </span>",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 30,00</span> <br> R$ 13,98 </span>",
         "category": "tech",
-        "image": "https://down-br.img.susercontent.com/file/sg-11134201-7repf-m22lehps5d6fda@resize_w450_nl.webp",
+        "image": "https://down-br.img.susercontent.com/file/cn-11134207-820l4-mio6krgg8gzld7@resize_w450_nl.webp",
         "link": "/api/v1/redirect?id=20",
         "sales": "+20mil vendidos",
-        "rating": "4.8",
-        "reviews": "13,2mil reviews"
+        "rating": "5.0",
+        "reviews": "31 reviews"
     },
     {
         "id": "21",
         "name": "Teclado Gamer K500-B61 Compacto 60% RGB",
-        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 299,90</span> R$ 199,90 </span>",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\"></span> R$ 189,90 - R$ 269,98 </span>",
         "category": "game",
         "image": "https://down-br.img.susercontent.com/file/br-11134207-7r98o-lrb1b11xkta324@resize_w450_nl.webp",
         "link": "/api/v1/redirect?id=21",
         "sales": "+421 vendidos",
         "rating": "5.0",
-        "reviews": "202 reviews"
+        "reviews": "207 reviews"
     },
     {
         "id": "22",
         "name": "Mousepad Gamer Led Rgb, Grande, 80cm X 30cm",
-        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 75,50</span> R$ 41,53 - R$ 75,50 </span>",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\"></span> R$ R$ 75,50 </span>",
         "category": "game",
         "image": "https://down-br.img.susercontent.com/file/72b0beb61729fad2c6c2e07f464cf4e0@resize_w450_nl.webp",
         "link": "/api/v1/redirect?id=22",
@@ -252,7 +252,7 @@
         "link": "/api/v1/redirect?id=23",
         "sales": "+40mil vendidos",
         "rating": "4.8",
-        "reviews": "13mil reviews"
+        "reviews": "9,2mil reviews"
     },
     {
         "id": "24",
@@ -263,12 +263,12 @@
         "link": "/api/v1/redirect?id=24",
         "sales": "+73 vendidos",
         "rating": "5.0",
-        "reviews": "36 reviews"
+        "reviews": "39 reviews"
     },
     {
         "id": "25",
         "name": "Caixa De Som Gamer Divoom Ditoo Pro",
-        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 750,00</span> R$ 633,90 </span>",
+        "price": "<span class=\"text-[10px] text-gray-500 line-through mr-1\">R$ 750,00</span> R$ 639,90 </span>",
         "category": "tech",
         "image": "https://down-br.img.susercontent.com/file/sg-11134201-7rcct-m6hv5yx24l237c@resize_w450_nl.webp",
         "link": "/api/v1/redirect?id=25",
